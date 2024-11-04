@@ -40,12 +40,12 @@
                         <div class="card z-index-0 fadeIn3 fadeInBottom">
                             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                                 <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
-                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Login Admin</h4>
+                                    <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Login Pegawai</h4>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <!-- Form with action and method -->
-                                <form role="form" class="text-start" action="{{ route('login_proses_admin') }}" method="POST">
+                                <form role="form" class="text-start" action="{{ route('login_proses_user') }}" method="POST">
                                     @csrf <!-- Token CSRF -->
                                     <div class="input-group input-group-outline my-3">
                                         <label class="form-label">Email</label>
@@ -61,7 +61,7 @@
                                     </div>
                                     <p class="mt-4 text-sm text-center">
                                         Don't have an account?
-                                        <a href="{{ route('register_admin') }}" class="text-primary text-gradient font-weight-bold">Register</a>
+                                        <a href="{{ route('register_user') }}" class="text-primary text-gradient font-weight-bold">Register</a>
                                     </p>
                                 </form>
                             </div>
