@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\AkunController;
 use Illuminate\Support\Facades\Route;
 
 //auth
@@ -44,5 +45,8 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard_admin', [DashboardAdminController::class, 'index'])->name('dashboard_admin');
 Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('dashboard_user');
+
+Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_admin');
+Route::get('/akun_pegawai', [AkunController::class, 'indexAdmin'])->name('akun_pegawai');
 
 
