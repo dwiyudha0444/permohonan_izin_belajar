@@ -25,8 +25,8 @@ use App\Http\Controllers\user\DashboardUserController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('landingpage.index');
+})->name('home');
 
 
 //auth
@@ -39,6 +39,8 @@ Route::get('/login_user', [LoginController::class, 'indexUser'])->name('login_us
 Route::post('/login_proses_user', [LoginController::class, 'loginUser'])->name('login_proses_user');
 Route::get('/register_user', [RegisterController::class, 'indexUser'])->name('register_user');
 Route::post('/register_proses_user', [RegisterController::class, 'registerUser'])->name('register_proses_user');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard_admin', [DashboardAdminController::class, 'index'])->name('dashboard_admin');
 Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('dashboard_user');
