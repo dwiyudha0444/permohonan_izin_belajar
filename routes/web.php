@@ -10,9 +10,10 @@ use App\Http\Controllers\auth\RegisterController;
 //admin
 use App\Http\Controllers\admin\DashboardAdminController;
 use App\Http\Controllers\admin\PermohonanController;
+
 //user
 use App\Http\Controllers\user\DashboardUserController;
-
+use App\Http\Controllers\user\BerkasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,9 +47,12 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/dashboard_admin', [DashboardAdminController::class, 'index'])->name('dashboard_admin');
 Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('dashboard_user');
 
+//admin
 Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_admin');
 Route::get('/akun_pegawai', [AkunController::class, 'indexAdmin'])->name('akun_pegawai');
-
 Route::get('/permohonan_izin_belajar', [PermohonanController::class, 'index'])->name('permohonan_izin_belajar');
+
+//pegawai
+Route::get('/upload_berkas', [BerkasController::class, 'index'])->name('upload_berkas');
 
 
