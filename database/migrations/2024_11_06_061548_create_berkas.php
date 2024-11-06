@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('berkas', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_users')->unsigned()->nullable();
             $table->timestamps();
         });
     }

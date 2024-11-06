@@ -1,4 +1,4 @@
-@extends('dashboard.index')
+@extends('dashboard.indexAdmin')
 @section('content')
     <div class="container-fluid py-2">
         <div class="row">
