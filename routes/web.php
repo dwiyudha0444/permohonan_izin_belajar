@@ -9,7 +9,7 @@ use App\Http\Controllers\auth\RegisterController;
 
 //admin
 use App\Http\Controllers\admin\DashboardAdminController;
-
+use App\Http\Controllers\admin\PermohonanController;
 //user
 use App\Http\Controllers\user\DashboardUserController;
 
@@ -48,5 +48,7 @@ Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('
 
 Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_admin');
 Route::get('/akun_pegawai', [AkunController::class, 'indexAdmin'])->name('akun_pegawai');
+
+Route::get('/permohonan_izin_belajar', [PermohonanController::class, 'index'])->name('permohonan_izin_belajar');
 
 
