@@ -49,7 +49,9 @@ Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('
 
 //admin
 Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_admin');
-Route::get('/akun_pegawai', [AkunController::class, 'indexAdmin'])->name('akun_pegawai');
+Route::get('/akun_pegawai', [AkunController::class, 'indexUser'])->name('akun_pegawai');
+Route::delete('/akun_admin/{id}', [AkunController::class, 'destroyAdmin'])->name('akun_admin_destroy');
+Route::delete('/akun_user/{id}', [AkunController::class, 'destroyUser'])->name('akun_user_destroy');
 Route::get('/permohonan_izin_belajar', [PermohonanController::class, 'index'])->name('permohonan_izin_belajar');
 
 //pegawai
