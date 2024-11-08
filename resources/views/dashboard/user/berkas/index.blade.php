@@ -8,7 +8,7 @@
                         <h6 class="mb-0">Payment Method</h6>
                     </div>
                     <div class="col-6 text-end">
-                        <a class="btn bg-gradient-dark mb-0" href="{{ route('')}}"><i
+                        <a class="btn bg-gradient-dark mb-0" href="{{ route('form_upload_berkas')}}"><i
                                 class="material-symbols-rounded text-sm">add</i>&nbsp;&nbsp;Add New Card</a>
                     </div>
                 </div>
@@ -18,10 +18,14 @@
                     <table class="table align-items-center mb-0">
                         <thead>
                             <tr>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Card Type
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No
                                 </th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Card
-                                    Number</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ijazah</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Transkip Nilai</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Penilaian Prestasi Kerja</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Jadwal Pendidikan</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                     Actions</th>
                             </tr>

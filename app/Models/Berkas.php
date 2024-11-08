@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Berkas extends Model
 {
-    use HasFactory;
+    protected $table = 'berkas';
+    
+    protected $fillable = [
+        'id_users', 
+        'ijazah',
+        'transkip_nilai',
+        'penilaian_prestasi_kerja',
+        'jadwal_pendidikan',  
+    ];
 }

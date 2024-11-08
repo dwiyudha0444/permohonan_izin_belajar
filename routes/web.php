@@ -56,5 +56,5 @@ Route::get('/permohonan_izin_belajar', [PermohonanController::class, 'index'])->
 
 //pegawai
 Route::get('/upload_berkas', [BerkasController::class, 'index'])->name('upload_berkas');
-
-
+Route::get('/form_upload_berkas', [BerkasController::class, 'edit'])->name('form_upload_berkas');
+Route::post('/form_upload_berkas', [BerkasController::class, 'store'])->name('store_form_upload_berkas');
