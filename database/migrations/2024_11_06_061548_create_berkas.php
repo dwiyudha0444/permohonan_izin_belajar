@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('berkas', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_users')->unsigned()->nullable();
+            $table->string('ijazah');
+            $table->string('transkip_nilai');
+            $table->string('penilaian_prestasi_kerja');
+            $table->date('jadwal_pendidikan');
             $table->timestamps();
         });
     }

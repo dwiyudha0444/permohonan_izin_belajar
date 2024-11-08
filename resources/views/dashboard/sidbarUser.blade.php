@@ -51,7 +51,7 @@
             <span class="nav-link-text ms-1">Notifications</span>
           </a>
         </li> --}}
-            <li class="nav-item mt-3">
+            {{-- <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark font-weight-bolder opacity-5">Account pages</h6>
             </li>
             <li class="nav-item dropdown">
@@ -72,7 +72,7 @@
                         </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
 
         </ul>
