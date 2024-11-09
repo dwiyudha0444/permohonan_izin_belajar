@@ -15,5 +15,11 @@ class Berkas extends Model
         'transkip_nilai',
         'penilaian_prestasi_kerja',
         'jadwal_pendidikan',  
+        'status'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_users', 'id');
+    }
 }

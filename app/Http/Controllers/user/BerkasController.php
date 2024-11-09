@@ -28,6 +28,7 @@ class BerkasController extends Controller
             'transkip_nilai' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'penilaian_prestasi_kerja' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'jadwal_pendidikan' => 'required',
+            'status' => 'required',
         ]);
 
         // Variabel untuk menyimpan nama file
@@ -60,6 +61,7 @@ class BerkasController extends Controller
             'transkip_nilai' => $transkipFile,
             'penilaian_prestasi_kerja' => $prestasiFile,
             'jadwal_pendidikan' => $request->jadwal_pendidikan,
+            'status' => $request->status,
             'created_at' => now(),
         ]);
 
