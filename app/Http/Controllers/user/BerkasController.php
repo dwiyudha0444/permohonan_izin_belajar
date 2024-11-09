@@ -22,11 +22,11 @@ class BerkasController extends Controller
     }
 
     public function edit($id)
-{
-    $berkas = Berkas::findOrFail($id);
+    {
+        $berkas = Berkas::findOrFail($id);
 
-    return view('dashboard.user.berkas.form_edit', compact('berkas'));
-}
+        return view('dashboard.user.berkas.form_edit', compact('berkas'));
+    }
 
 
     public function store(Request $request)
