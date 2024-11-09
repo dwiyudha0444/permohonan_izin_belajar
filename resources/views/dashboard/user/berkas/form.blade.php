@@ -1,5 +1,22 @@
 @extends('dashboard.indexUser')
 @section('content')
+    <style>
+        .form-control[type="file"] {
+            padding-right: 20px;
+            /* Space on the right side of the input */
+        }
+
+        .form-control[type="file"]::-webkit-file-upload-button {
+            padding-right: 10px;
+            /* Adjust button padding */
+        }
+
+        /* Adjust text for 'No file chosen' */
+        .form-control[type="file"]:not(:placeholder-shown) {
+            padding-left: 10px;
+            /* Add space on the left side */
+        }
+    </style>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -33,6 +50,7 @@
                                 <input type="file" class="form-control" id="penilaian_prestasi_kerja"
                                     name="penilaian_prestasi_kerja" accept="image/*" required>
                             </div>
+
 
                             <!-- Jadwal Pendidikan -->
                             <div class="form-group mb-3">

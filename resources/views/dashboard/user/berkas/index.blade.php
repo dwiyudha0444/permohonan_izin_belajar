@@ -98,8 +98,10 @@
 
                                     </td>
                                     <td class="align-middle text-center">
-                                        <i class="material-symbols-rounded text-dark cursor-pointer"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
+                                        <a href="{{ route('edit_upload_berkas', ['id' => $use->id]) }}" class="text-dark"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">
+                                            <i class="material-symbols-rounded cursor-pointer">edit</i>
+                                        </a>
 
                                         <form action="{{ route('upload_berkas_destroy', $use->id) }}" method="POST"
                                             style="display: inline;">
