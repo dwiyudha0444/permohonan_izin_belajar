@@ -100,7 +100,21 @@
                                     <td class="align-middle text-center">
                                         <i class="material-symbols-rounded text-dark cursor-pointer"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
+
+                                        <form action="{{ route('upload_berkas_destroy', $use->id) }}" method="POST"
+                                            style="display: inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-link p-0 m-0 text-dark"
+                                                onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                                <i class="material-symbols-rounded text-dark cursor-pointer"
+                                                    data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Hapus Card">delete</i>
+                                            </button>
+                                        </form>
                                     </td>
+
+
                                 </tr>
                             @endforeach
                         </tbody>

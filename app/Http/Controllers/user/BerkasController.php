@@ -4,6 +4,7 @@ namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
 use App\Models\Berkas;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,9 +16,14 @@ class BerkasController extends Controller
         return view('dashboard.user.berkas.index', compact('berkas'));
     }
 
-    public function edit()
+    public function create()
     {
         return view('dashboard.user.berkas.form');
+    }
+
+    public function edit()
+    {
+        return view('dashboard.user.berkas.form_edit');
     }
 
     public function store(Request $request)
@@ -68,4 +74,30 @@ class BerkasController extends Controller
         return redirect()->route('upload_berkas')
             ->with('success', 'Data Berhasil Disimpan');
     }
+
+    public function destroy($id)
+    {
+        // Cari data berkas berdasarkan ID
+        $berkas = Berkas::findOrFail($id);
+    
+        // Hapus file dari direktori publik jika file ada
+        if ($berkas->ijazah && file_exists(public_path('berkas/assets/ijazah/' . $berkas->ijazah))) {
+            unlink(public_path('berkas/assets/ijazah/' . $berkas->ijazah));
+        }
+    
+        if ($berkas->transkip_nilai && file_exists(public_path('berkas/assets/transkip_nilai/' . $berkas->transkip_nilai))) {
+            unlink(public_path('berkas/assets/transkip_nilai/' . $berkas->transkip_nilai));
+        }
+    
+        if ($berkas->penilaian_prestasi_kerja && file_exists(public_path('berkas/assets/penilaian_prestasi_kerja/' . $berkas->penilaian_prestasi_kerja))) {
+            unlink(public_path('berkas/assets/penilaian_prestasi_kerja/' . $berkas->penilaian_prestasi_kerja));
+        }
+    
+        // Hapus data dari database
+        $berkas->delete();
+    
+        // Redirect atau response
+        return redirect()->route('upload_berkas')->with('success', 'Data berkas berhasil dihapus.');
+    }
+    
 }
