@@ -10,6 +10,7 @@ use App\Http\Controllers\auth\RegisterController;
 //admin
 use App\Http\Controllers\admin\DashboardAdminController;
 use App\Http\Controllers\admin\PermohonanController;
+use App\Http\Controllers\admin\MonitoringAdminController;
 
 //user
 use App\Http\Controllers\user\DashboardUserController;
@@ -58,6 +59,8 @@ Route::delete('/akun_user/{id}', [AkunController::class, 'destroyUser'])->name('
 Route::get('/permohonan_izin_belajar', [PermohonanController::class, 'index'])->name('permohonan_izin_belajar');
 Route::get('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'edit'])->name('edit_permohonan');
 Route::put('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'update'])->name('update_permohonan');
+
+Route::get('/monitoring_admin', [MonitoringAdminController::class, 'index'])->name('monitoring_admin');
 
 
 //pegawai

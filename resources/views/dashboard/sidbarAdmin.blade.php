@@ -21,18 +21,19 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{{ route ('permohonan_izin_belajar')}}">
+                <a class="nav-link text-dark" href="{{ route('permohonan_izin_belajar') }}">
                     <i class="material-symbols-rounded opacity-5">table_view</i>
                     <span class="nav-link-text ms-1">Permohonan Izin Belajar</span>
                 </a>
             </li>
 
-            {{-- <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/billing.html">
-            <i class="material-symbols-rounded opacity-5">receipt_long</i>
-            <span class="nav-link-text ms-1">Billing</span>
-          </a>
-        </li> --}}
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="{{ route('monitoring_admin') }}">
+                    <i class="material-symbols-rounded opacity-5">receipt_long</i>
+                    <span class="nav-link-text ms-1">Monitoring</span>
+                </a>
+            </li>
+            
             {{-- <li class="nav-item">
           <a class="nav-link text-dark" href="../pages/virtual-reality.html">
             <i class="material-symbols-rounded opacity-5">view_in_ar</i>
