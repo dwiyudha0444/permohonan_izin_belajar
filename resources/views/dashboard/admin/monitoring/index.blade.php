@@ -100,7 +100,7 @@
                                             <i class="material-symbols-rounded cursor-pointer">edit</i>
                                         </a>
 
-                                        <form action="{{ route('destroy_monitoring', $use->id) }}" method="POST"
+                                        {{-- <form action="{{ route('destroy_monitoring', $use->id) }}" method="POST"
                                             style="display: inline;">
                                             @csrf
                                             @method('DELETE')
@@ -110,7 +110,7 @@
                                                     data-bs-toggle="tooltip" data-bs-placement="top"
                                                     title="Hapus Card">delete</i>
                                             </button>
-                                        </form>
+                                        </form> --}}
                                     </td>
 
 
