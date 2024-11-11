@@ -87,7 +87,7 @@
                                     <td>
                                         <h6 class="mb-0 text-sm"
                                             style="
-                                            background-color: {{ $use->status === 'proses' ? 'blue' : ($use->status === 'verifikasi' ? 'green' : 'gray') }};
+                                            background-color: {{ $use->status === 'proses' ? 'blue' : ($use->status === 'terverifikasi' ? 'green' : 'gray') }};
                                             color: white;
                                             padding: 10px 20px;
                                             border-radius: 5px;

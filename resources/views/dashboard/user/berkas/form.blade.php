@@ -22,7 +22,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header bg-gradient-dark text-white">
-                        <h4 class="text-center">Input Barang</h4>
+                        <h4 class="text-center text-white">Input</h4>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('store_form_upload_berkas') }}" method="POST" enctype="multipart/form-data">

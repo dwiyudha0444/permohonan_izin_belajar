@@ -22,7 +22,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header bg-gradient-dark text-white">
-                        <h4 class="text-center">Update Barang</h4>
+                        <h4 class="text-center text-white">Update</h4>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('update_form_upload_berkas', $berkas->id) }}" method="POST"

@@ -22,7 +22,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header bg-gradient-dark text-white">
-                        <h4 class="text-center">Update Barang</h4>
+                        <h4 class="text-center text-white">Update</h4>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('update_permohonan', $berkas->id) }}" method="POST"
@@ -35,39 +35,38 @@
 
                             <!-- Ijazah -->
                             <div class="form-group mb-3">
-                                <!-- Menampilkan file yang sudah ada jika tidak diubah -->
                                 @if ($berkas->ijazah)
                                     <small class="d-block mt-2">Ijazah yang ada: <a
                                             href="{{ asset('berkas/assets/ijazah/' . $berkas->ijazah) }}"
                                             target="_blank">Lihat</a></small>
                                 @endif
-                                <!-- Menambahkan input file untuk ijazah -->
-                                <input type="hidden" class="form-control" id="ijazah" name="ijazah" value="{{ $berkas->ijazah }}" accept=".jpg,.jpeg,.png,.gif,.svg">
+                                <input type="file" class="form-control" id="ijazah" name="ijazah"
+                                    accept=".jpg,.jpeg,.png,.gif,.svg" disabled>
                             </div>
 
                             <!-- Transkip Nilai -->
                             <div class="form-group mb-3">
-                                <!-- Menampilkan file yang sudah ada jika tidak diubah -->
                                 @if ($berkas->transkip_nilai)
                                     <small class="d-block mt-2">Transkip Nilai yang ada: <a
                                             href="{{ asset('berkas/assets/transkip_nilai/' . $berkas->transkip_nilai) }}"
                                             target="_blank">Lihat</a></small>
                                 @endif
-                                <!-- Menambahkan input file untuk transkip nilai -->
-                                <input type="hidden" class="form-control" id="transkip_nilai" value="{{ $berkas->transkip_nilai }}" name="transkip_nilai" accept=".jpg,.jpeg,.png,.gif,.svg">
+                                <input type="file" class="form-control" id="transkip_nilai" name="transkip_nilai"
+                                    accept=".jpg,.jpeg,.png,.gif,.svg" disabled>
                             </div>
 
                             <!-- Penilaian Prestasi Kerja -->
                             <div class="form-group mb-3">
-                                <!-- Menampilkan file yang sudah ada jika tidak diubah -->
                                 @if ($berkas->penilaian_prestasi_kerja)
                                     <small class="d-block mt-2">Penilaian Prestasi Kerja yang ada: <a
                                             href="{{ asset('berkas/assets/penilaian_prestasi_kerja/' . $berkas->penilaian_prestasi_kerja) }}"
                                             target="_blank">Lihat</a></small>
                                 @endif
-                                <!-- Menambahkan input file untuk penilaian prestasi kerja -->
-                                <input type="hidden" class="form-control" value="{{ $berkas->penilaian_prestasi_kerja }}" id="penilaian_prestasi_kerja" name="penilaian_prestasi_kerja" accept=".jpg,.jpeg,.png,.gif,.svg">
+                                <input type="file" class="form-control" id="penilaian_prestasi_kerja"
+                                    name="penilaian_prestasi_kerja" accept=".jpg,.jpeg,.png,.gif,.svg" disabled>
                             </div>
+
+
 
                             <!-- Jadwal Pendidikan -->
                             <div class="form-group mb-3">
@@ -80,9 +79,13 @@
                             <div class="form-group mb-3">
                                 <label for="status">Status</label>
                                 <select class="form-control" id="status" name="status" required>
-                                    <option value="proses" {{ $berkas->status == 'proses' ? 'selected' : '' }}>Proses</option>
-                                    <option value="selesai" {{ $berkas->status == 'selesai' ? 'selected' : '' }}>Selesai</option>
-                                    <option value="ditolak" {{ $berkas->status == 'ditolak' ? 'selected' : '' }}>Ditolak</option>
+                                    <option value="proses" {{ $berkas->status == 'proses' ? 'selected' : '' }}>Proses
+                                    </option>
+                                    <option value="terverifikasi"
+                                        {{ $berkas->status == 'terverifikasi' ? 'selected' : '' }}>Terverifikasi
+                                    </option>
+                                    <option value="revisi" {{ $berkas->status == 'revisi' ? 'selected' : '' }}>Revisi
+                                    </option>
                                 </select>
                             </div>
 
