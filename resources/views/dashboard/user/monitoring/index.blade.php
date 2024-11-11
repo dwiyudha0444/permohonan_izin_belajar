@@ -95,12 +95,12 @@
                                     </td>
 
                                     <td class="align-middle text-center">
-                                        <a href="{{ route('edit_upload_berkas', ['id' => $use->id]) }}" class="text-dark"
+                                        <a href="{{ route('edit_monitoring', ['id' => $use->id]) }}" class="text-dark"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">
                                             <i class="material-symbols-rounded cursor-pointer">edit</i>
                                         </a>
 
-                                        <form action="{{ route('upload_berkas_destroy', $use->id) }}" method="POST"
+                                        <form action="{{ route('destroy_monitoring', $use->id) }}" method="POST"
                                             style="display: inline;">
                                             @csrf
                                             @method('DELETE')

@@ -68,6 +68,9 @@ Route::get('/edit_upload_berkas/{id}', [BerkasController::class, 'edit'])->name(
 Route::put('/edit_upload_berkas/{id}', [BerkasController::class, 'update'])->name('update_form_upload_berkas');
 Route::delete('/upload_berkas/{id}', [BerkasController::class, 'destroy'])->name('upload_berkas_destroy');
 
-Route::get('/monitoring', [MonitoringController::class, 'index'])->name('monitoring');
+Route::get('/monitoring1', [MonitoringController::class, 'index'])->name('monitoring');
 Route::get('/form_monitoring', [MonitoringController::class, 'create'])->name('form_monitoring');
 Route::post('/form_monitoring', [MonitoringController::class, 'store'])->name('store_form_monitoring');
+Route::get('/edit_monitoring/{id}', [MonitoringController::class, 'edit'])->name('edit_monitoring');
+Route::put('/edit_monitoring/{id}', [MonitoringController::class, 'update'])->name('update_monitoring');
+Route::delete('/monitoring/{id}', [MonitoringController::class, 'destroy'])->name('destroy_monitoring');
