@@ -15,6 +15,7 @@ use App\Http\Controllers\admin\PermohonanController;
 use App\Http\Controllers\user\DashboardUserController;
 use App\Http\Controllers\user\BerkasController;
 use App\Http\Controllers\user\MonitoringController;
+use App\Models\Monitoring;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,3 +69,5 @@ Route::put('/edit_upload_berkas/{id}', [BerkasController::class, 'update'])->nam
 Route::delete('/upload_berkas/{id}', [BerkasController::class, 'destroy'])->name('upload_berkas_destroy');
 
 Route::get('/monitoring', [MonitoringController::class, 'index'])->name('monitoring');
+Route::get('/form_monitoring', [MonitoringController::class, 'create'])->name('form_monitoring');
+Route::post('/form_monitoring', [MonitoringController::class, 'store'])->name('store_form_monitoring');

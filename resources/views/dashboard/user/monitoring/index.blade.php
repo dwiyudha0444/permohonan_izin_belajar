@@ -8,7 +8,7 @@
                         <h6 class="mb-0">Monitoring</h6>
                     </div>
                     <div class="col-6 text-end">
-                        <a class="btn bg-gradient-dark mb-0" href=""><i
+                        <a class="btn bg-gradient-dark mb-0" href="{{ route('form_monitoring')}}"><i
                                 class="material-symbols-rounded text-sm">add</i>&nbsp;&nbsp;Add</a>
                     </div>
                 </div>
