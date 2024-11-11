@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\PermohonanController;
 //user
 use App\Http\Controllers\user\DashboardUserController;
 use App\Http\Controllers\user\BerkasController;
+use App\Http\Controllers\user\MonitoringController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,3 +66,5 @@ Route::post('/form_upload_berkas', [BerkasController::class, 'store'])->name('st
 Route::get('/edit_upload_berkas/{id}', [BerkasController::class, 'edit'])->name('edit_upload_berkas');
 Route::put('/edit_upload_berkas/{id}', [BerkasController::class, 'update'])->name('update_form_upload_berkas');
 Route::delete('/upload_berkas/{id}', [BerkasController::class, 'destroy'])->name('upload_berkas_destroy');
+
+Route::get('/monitoring', [MonitoringController::class, 'index'])->name('monitoring');
