@@ -62,6 +62,14 @@
                                             @enderror
                                         </div>
                                         <div class="input-group input-group-outline mb-3">
+                                            <label class="form-label">NIP</label>
+                                            <input type="text" name="nip" class="form-control" required>
+                                            @error('nip')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+
+                                        <div class="input-group input-group-outline mb-3">
                                             <label class="form-label">Email</label>
                                             <input type="email" name="email" class="form-control">
                                             @error('email')

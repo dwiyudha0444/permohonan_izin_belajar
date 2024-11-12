@@ -25,6 +25,7 @@ class Admin extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'nip',
         'email',
         'password',
     ];
@@ -36,6 +37,7 @@ class Admin extends Authenticatable
      */
     protected $hidden = [
         'password',
+        'nip',
         'remember_token',
     ];
 

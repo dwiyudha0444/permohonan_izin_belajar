@@ -48,8 +48,8 @@
                                 <form role="form" class="text-start" action="{{ route('login_proses_user') }}" method="POST">
                                     @csrf <!-- Token CSRF -->
                                     <div class="input-group input-group-outline my-3">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" class="form-control" name="email" required>
+                                        <label class="form-label">NIP</label>
+                                        <input type="text" class="form-control" name="nip" required>
                                     </div>
                                     <div class="input-group input-group-outline mb-3">
                                         <label class="form-label">Password</label>

@@ -24,41 +24,42 @@ class LoginController extends Controller
     public function loginUser(Request $request)
     {
         $request->validate([
-            'email'     => 'required',
+            'nip'       => 'required',
             'password'  => 'required',
         ]);
-
+    
         $credentials = [
-            'email'     => $request->email,
+            'nip'       => $request->nip,
             'password'  => $request->password
         ];
-
+    
         if (Auth::guard('web')->attempt($credentials)) {
             return redirect()->route('dashboard_user');
         }
-
-        return redirect()->route('login_user')->with('error', 'Email atau Password Salah');
+    
+        return redirect()->route('login_user')->with('error', 'NIP atau Password Salah');
     }
-
+    
     public function loginAdmin(Request $request)
     {
         $request->validate([
-            'email'     => 'required',
+            'nip'       => 'required',
             'password'  => 'required',
         ]);
-
+    
         $credentials = [
-            'email'     => $request->email,
+            'nip'       => $request->nip,
             'password'  => $request->password
         ];
-
+    
         if (Auth::guard('admin')->attempt($credentials)) {
             // Arahkan ke halaman dashboard admin
             return redirect()->route('dashboard_admin');
         }
-
-        return redirect()->route('login_admin')->with('error', 'Email atau Password Salah');
+    
+        return redirect()->route('login_admin')->with('error', 'NIP atau Password Salah');
     }
+    
 
     public function logout()
         {

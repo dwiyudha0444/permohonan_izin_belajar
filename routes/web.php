@@ -16,7 +16,9 @@ use App\Http\Controllers\admin\MonitoringAdminController;
 use App\Http\Controllers\user\DashboardUserController;
 use App\Http\Controllers\user\BerkasController;
 use App\Http\Controllers\user\MonitoringController;
+use App\Http\Controllers\user\ProfileController;
 use App\Models\Monitoring;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +51,8 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard_admin', [DashboardAdminController::class, 'index'])->name('dashboard_admin');
 Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('dashboard_user');
+
+Route::get('/profile_user', [ProfileController::class, 'index'])->name('profile_user');
 
 //admin
 Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_admin');

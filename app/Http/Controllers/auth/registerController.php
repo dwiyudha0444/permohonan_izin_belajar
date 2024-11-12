@@ -25,12 +25,14 @@ class registerController extends Controller
     {
         $request->validate([
             'name'     => 'required',
+            'nip'      => 'required|unique:users,nip', 
             'email'    => 'required|email|unique:users,email',
             'password' => 'required'
         ]);
 
         $data = [
             'name'     => $request->name,
+            'nip'     => $request->nip,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
         ];
@@ -39,7 +41,7 @@ class registerController extends Controller
         User::create($data);
 
         $login = [
-            'email'    => $request->email,
+            'nip'    => $request->nip,
             'password' => $request->password
         ];
 
@@ -54,12 +56,14 @@ class registerController extends Controller
     {
         $request->validate([
             'name'     => 'required',
+            'nip'      => 'required|unique:admin,nip', 
             'email'    => 'required|email|unique:admin,email',
             'password' => 'required'
         ]);
 
         $data = [
             'name'     => $request->name,
+            'nip'     => $request->nip,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
         ];
@@ -68,7 +72,7 @@ class registerController extends Controller
         Admin::create($data);
 
         $login = [
-            'email'    => $request->email,
+            'nip'    => $request->nip,
             'password' => $request->password
         ];
 
