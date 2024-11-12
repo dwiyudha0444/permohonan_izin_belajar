@@ -13,4 +13,16 @@ class ProfileController extends Controller
         $user = User::all();
         return view('dashboard.user.profil.index', compact('user'));
     }
+
+    public function edit($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('dashboard.user.profil.form_edit', compact('user'));
+    }
+
+    public function update($id)
+    {
+    }
+
 }

@@ -18,6 +18,14 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('nip')->unique();
+            $table->date('tgl_lahir')->nullable();
+            $table->string('pangkat')->nullable();
+            $table->string('tmt')->nullable();
+            $table->string('jabatan')->nullable();
+            $table->string('lokasi_bekerja')->nullable();
+            $table->string('jejang_pendidikan')->nullable();
+            $table->string('lulus_pendidikan')->nullable();
+            $table->string('tugas_pekerjaan')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

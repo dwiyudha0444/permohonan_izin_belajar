@@ -53,6 +53,8 @@ Route::get('/dashboard_admin', [DashboardAdminController::class, 'index'])->name
 Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('dashboard_user');
 
 Route::get('/profile_user', [ProfileController::class, 'index'])->name('profile_user');
+Route::get('/profile_user/{id}', [ProfileController::class, 'edit'])->name('edit_profile_user');
+Route::put('/profile_user/{id}', [ProfileController::class, 'update'])->name('update_profile_user');
 
 //admin
 Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_admin');

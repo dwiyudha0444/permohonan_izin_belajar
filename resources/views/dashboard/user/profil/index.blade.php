@@ -15,16 +15,16 @@
                 <div class="col-auto my-auto">
                     <div class="h-100">
                         <h5 class="mb-1">
-                            Richard Davis
+                            {{ Auth::user()->name }}
                         </h5>
                         <p class="mb-0 font-weight-normal text-sm">
-                            CEO / Co-Founder
+                            {{ Auth::user()->jabatan }}
                         </p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
                     <div class="nav-wrapper position-relative end-0">
-                        
+
                     </div>
                 </div>
             </div>
@@ -39,38 +39,58 @@
                                         <h6 class="mb-0">Profile Information</h6>
                                     </div>
                                     <div class="col-md-4 text-end">
-                                        <a href="javascript:;">
+                                        <a href="{{ route('edit_profile_user', ['id' => Auth::id()]) }}">
                                             <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip"
                                                 data-bs-placement="top" title="Edit Profile"></i>
                                         </a>
+
                                     </div>
                                 </div>
                             </div>
                             <div class="card-body p-3">
                                 <ul class="list-group">
-                                    <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Full
-                                            Nama:</strong> &nbsp; Alec M. Thompson</li>
-                                    <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                            class="text-dark">Nip:</strong> &nbsp; (44) 123 1234 123</li>
-                                    <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Tempat
-                                            Tanggal Lahir:</strong> &nbsp; alecthompson@mail.com</li>
-                                    <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                            class="text-dark">Pangkat:</strong> &nbsp; USA</li>
+                                    <li class="list-group-item border-0 ps-0 pt-0 text-sm">
+                                        <strong class="text-dark">Full Nama:</strong> &nbsp;
+                                        {{ Auth::user()->name ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Nip:</strong> &nbsp;
+                                        {{ Auth::user()->nip ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Tempat Tanggal Lahir:</strong> &nbsp;
+                                        {{ Auth::user()->tgl ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Pangkat:</strong> &nbsp;
+                                        {{ Auth::user()->pangkat ?? 'Data tidak tersedia' }}
+                                    </li>
                                     <li class="list-group-item border-0 ps-0 pb-0">
                                         <strong class="text-dark text-sm">TMT:</strong> &nbsp;
-
+                                        {{ Auth::user()->tmt ?? 'Data tidak tersedia' }}
                                     </li>
-                                    <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                            class="text-dark">Jabatan:</strong> &nbsp; USA</li>
-                                    <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                            class="text-dark">Lokasi Tempat Bekerja / Satuan Kerja:</strong> &nbsp; USA</li>
-                                    <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                            class="text-dark">Jenjang Pendidikan:</strong> &nbsp; USA</li>
-                                            <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                            class="text-dark">Lulusan Pendidikan Terakhir:</strong> &nbsp; USA</li>
-                                            <li class="list-group-item border-0 ps-0 text-sm"><strong
-                                            class="text-dark">Tugas Pekerjaan yang saya tangani saat ini:</strong> &nbsp; USA</li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Jabatan:</strong> &nbsp;
+                                        {{ Auth::user()->jabatan ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Lokasi Tempat Bekerja / Satuan Kerja:</strong> &nbsp;
+                                        {{ Auth::user()->lokasi_bekerja ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Jenjang Pendidikan:</strong> &nbsp;
+                                        {{ Auth::user()->jejang_pendidikan ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Lulusan Pendidikan Terakhir:</strong> &nbsp;
+                                        {{ Auth::user()->lulusan_pendidikan ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Tugas Pekerjaan yang saya tangani saat ini:</strong>
+                                        &nbsp; {{ Auth::user()->tugas_pekerjaan ?? 'Data tidak tersedia' }}
+                                    </li>
                                 </ul>
+
                             </div>
                         </div>
                     </div>
