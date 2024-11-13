@@ -46,7 +46,7 @@
                                             </tr>
                                             <tr>
                                                 <td><label for="tgl">Tempat Tanggal Lahir</label></td>
-                                                <td><input type="text" class="form-control" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', $user->tgl_lahir) }}" required></td>
+                                                <td><input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', $user->tgl_lahir) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="pangkat">Pangkat</label></td>
@@ -83,12 +83,6 @@
                                                         name="lulusan_pendidikan"
                                                         value="{{ old('lulusan_pendidikan', $user->lulusan_pendidikan) }}"
                                                         required></td>
-                                            </tr>
-                                            <tr>
-                                                <td><label for="tugas_pekerjaan">Tugas Pekerjaan</label></td>
-                                                <td>
-                                                    <textarea class="form-control" id="tugas_pekerjaan" name="tugas_pekerjaan" required>{{ old('tugas_pekerjaan', $user->tugas_pekerjaan) }}</textarea>
-                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
