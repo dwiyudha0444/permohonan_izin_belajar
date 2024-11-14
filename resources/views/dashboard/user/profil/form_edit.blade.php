@@ -78,10 +78,17 @@
                                                         required></td>
                                             </tr>
                                             <tr>
-                                                <td><label for="lulusan_pendidikan">Lulusan Pendidikan Terakhir</label></td>
-                                                <td><input type="text" class="form-control" id="lulusan_pendidikan"
-                                                        name="lulusan_pendidikan"
-                                                        value="{{ old('lulusan_pendidikan', $user->lulusan_pendidikan) }}"
+                                                <td><label for="lulus_pendidikan">Lulusan Pendidikan Terakhir</label></td>
+                                                <td><input type="text" class="form-control" id="lulus_pendidikan"
+                                                        name="lulus_pendidikan"
+                                                        value="{{ old('lulus_pendidikan', $user->lulus_pendidikan) }}"
+                                                        required></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="tugas_pekerjaan">Tugas Pendidikan</label></td>
+                                                <td><input type="text" class="form-control" id="tugas_pekerjaan"
+                                                        name="tugas_pekerjaan"
+                                                        value="{{ old('tugas_pekerjaan', $user->tugas_pekerjaan) }}"
                                                         required></td>
                                             </tr>
                                         </tbody>

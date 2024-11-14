@@ -67,6 +67,7 @@ Route::get('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'edit'
 Route::put('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'update'])->name('update_permohonan');
 
 Route::get('/monitoring_admin', [MonitoringAdminController::class, 'index'])->name('monitoring_admin');
+Route::get('/monitoring_admin/{id}', [MonitoringAdminController::class, 'edit'])->name('edit_monitoring_admin');
 
 
 //pegawai

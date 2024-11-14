@@ -37,6 +37,9 @@ class BerkasController extends Controller
             'transkip_nilai' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'penilaian_prestasi_kerja' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'jadwal_pendidikan' => 'required',
+            'peguruan_tinggi' => 'required',
+            'jurusan' => 'required',
+            'alamat' => 'required',
             'status' => 'required',
         ]);
 
@@ -70,6 +73,9 @@ class BerkasController extends Controller
             'transkip_nilai' => $transkipFile,
             'penilaian_prestasi_kerja' => $prestasiFile,
             'jadwal_pendidikan' => $request->jadwal_pendidikan,
+            'peguruan_tinggi' => $request->peguruan_tinggi,
+            'jurusan' => $request->jurusan,
+            'alamat' => $request->alamat,
             'status' => $request->status,
             'created_at' => now(),
         ]);
@@ -86,6 +92,9 @@ class BerkasController extends Controller
             'transkip_nilai' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'penilaian_prestasi_kerja' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'jadwal_pendidikan' => 'required',
+            'peguruan_tinggi' => 'required',
+            'jurusan' => 'required',
+            'alamat' => 'required',
             'status' => 'required',
         ]);
 
@@ -131,6 +140,9 @@ class BerkasController extends Controller
             'transkip_nilai' => $transkipFile,
             'penilaian_prestasi_kerja' => $prestasiFile,
             'jadwal_pendidikan' => $request->jadwal_pendidikan,
+            'peguruan_tinggi' => $request->peguruan_tinggi,
+            'jurusan' => $request->jurusan,
+            'alamat' => $request->alamat,
             'status' => $request->status,
             'updated_at' => now(),
         ]);

@@ -33,6 +33,24 @@
                             <!-- ID User -->
                             <input type="hidden" id="id_users" name="id_users" value="{{ $berkas->id_users }}">
 
+<div class="form-group mb-3">
+                                <label for="peguruan_tinggi">Perguruan Tinggi</label>
+                                <input type="text" class="form-control" id="peguruan_tinggi" name="peguruan_tinggi"
+                                    value="{{ $berkas->peguruan_tinggi }}" readonly required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="jurusan">Jurusan</label>
+                                <input type="text" class="form-control" id="jurusan" name="jurusan"
+                                    value="{{ $berkas->jurusan }}" readonly required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control" id="alamat" name="alamat"
+                                    value="{{ $berkas->alamat }}" readonly required>
+                            </div>
+
                             <!-- Ijazah -->
                             <div class="form-group mb-3">
                                 @if ($berkas->ijazah)
@@ -72,7 +90,7 @@
                             <div class="form-group mb-3">
                                 <label for="jadwal_pendidikan">Jadwal Pendidikan</label>
                                 <input type="date" class="form-control" id="jadwal_pendidikan" name="jadwal_pendidikan"
-                                    value="{{ $berkas->jadwal_pendidikan }}">
+                                    value="{{ $berkas->jadwal_pendidikan }}" readonly>
                             </div>
 
                             <!-- Status (Only field that can be updated) -->

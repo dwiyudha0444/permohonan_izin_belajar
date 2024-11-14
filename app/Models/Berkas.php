@@ -15,7 +15,11 @@ class Berkas extends Model
         'transkip_nilai',
         'penilaian_prestasi_kerja',
         'jadwal_pendidikan',  
-        'status'
+        'status',
+        'peguruan_tinggi',
+        'jurusan',
+        'alamat'
+
     ];
 
     public function user()

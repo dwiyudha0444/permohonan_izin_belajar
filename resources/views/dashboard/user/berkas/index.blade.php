@@ -5,7 +5,7 @@
             <div class="card-header pb-0 p-3">
                 <div class="row">
                     <div class="col-6 d-flex align-items-center">
-                        <h6 class="mb-0">Payment Method</h6>
+                        <h6 class="mb-0">Berkas Persyaratan</h6>
                     </div>
                     <div class="col-6 text-end">
                         <a class="btn bg-gradient-dark mb-0" href="{{ route('form_upload_berkas') }}"><i

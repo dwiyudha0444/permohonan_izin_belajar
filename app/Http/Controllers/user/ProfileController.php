@@ -58,7 +58,7 @@ class ProfileController extends Controller
             'updated_at' => now(),
         ]);
     
-        return redirect()->route('upload_berkas')
+        return redirect()->route('profile_user')
             ->with('success', 'Data Berhasil Diperbarui');
     }
     

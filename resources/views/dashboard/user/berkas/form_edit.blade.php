@@ -33,6 +33,23 @@
                             <!-- ID User -->
                             <input type="hidden" id="id_users" name="id_users" value="{{ Auth::user()->id }}">
 
+<div class="form-group mb-3">
+                                <label for="peguruan_tinggi">Perguruan Tinggi</label>
+                                <input type="text" class="form-control" id="peguruan_tinggi" name="peguruan_tinggi"
+                                    value="{{ $berkas->peguruan_tinggi }}" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="jurusan">Jurusan</label>
+                                <input type="text" class="form-control" id="jurusan" name="jurusan"
+                                    value="{{ $berkas->jurusan }}" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control" id="alamat" name="alamat"
+                                    value="{{ $berkas->alamat }}" required>
+                            </div>
                             <!-- Ijazah -->
                             <div class="form-group mb-3">
                                 <label for="ijazah">Ijazah</label>

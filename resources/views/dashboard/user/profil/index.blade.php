@@ -6,7 +6,7 @@
             <span class="mask  bg-gradient-dark  opacity-6"></span>
         </div>
         <div class="card card-body mx-2 mx-md-2 mt-n6">
-            <div class="row gx-4 mb-2">
+            {{-- <div class="row gx-4 mb-2">
                 <div class="col-auto">
                     <div class="avatar avatar-xl position-relative">
                         <img src="../assets/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
@@ -27,7 +27,7 @@
 
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="row">
                 <div class="row">
 
@@ -83,7 +83,7 @@
                                     </li>
                                     <li class="list-group-item border-0 ps-0 text-sm">
                                         <strong class="text-dark">Lulusan Pendidikan Terakhir:</strong> &nbsp;
-                                        {{ Auth::user()->lulusan_pendidikan ?? 'Data tidak tersedia' }}
+                                        {{ Auth::user()->lulus_pendidikan ?? 'Data tidak tersedia' }}
                                     </li>
                                     <li class="list-group-item border-0 ps-0 text-sm">
                                         <strong class="text-dark">Tugas Pekerjaan yang saya tangani saat ini:</strong>
