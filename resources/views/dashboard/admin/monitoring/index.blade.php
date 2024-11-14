@@ -5,7 +5,7 @@
             <div class="card-header pb-0 p-3">
                 <div class="row">
                     <div class="col-6 d-flex align-items-center">
-                        <h6 class="mb-0">Monitoring</h6>
+                        <h6 class="mb-0">Monitoring Admin</h6>
                     </div>
                     <div class="col-6 text-end">
                         <a class="btn bg-gradient-dark mb-0" href="{{ route('form_monitoring')}}"><i
@@ -95,7 +95,7 @@
                                     </td>
 
                                     <td class="align-middle text-center">
-                                        <a href="{{ route('edit_monitoring', ['id' => $use->id]) }}" class="text-dark"
+                                        <a href="{{ route('edit_monitoring_admin', ['id' => $use->id]) }}" class="text-dark"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">
                                             <i class="material-symbols-rounded cursor-pointer">edit</i>
                                         </a>

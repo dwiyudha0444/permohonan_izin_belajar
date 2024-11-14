@@ -11,7 +11,7 @@ use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\admin\DashboardAdminController;
 use App\Http\Controllers\admin\PermohonanController;
 use App\Http\Controllers\admin\MonitoringAdminController;
-
+use App\Http\Controllers\admin\ProfileAdminController;
 //user
 use App\Http\Controllers\user\DashboardUserController;
 use App\Http\Controllers\user\BerkasController;
@@ -52,10 +52,6 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/dashboard_admin', [DashboardAdminController::class, 'index'])->name('dashboard_admin');
 Route::get('/dashboard_user', [DashboardUserController::class, 'index'])->name('dashboard_user');
 
-Route::get('/profile_user', [ProfileController::class, 'index'])->name('profile_user');
-Route::get('/profile_user/{id}', [ProfileController::class, 'edit'])->name('edit_profile_user');
-Route::put('/update_profile_user/{id}', [ProfileController::class, 'update'])->name('update_profile_user');
-
 //admin
 Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_admin');
 Route::get('/akun_pegawai', [AkunController::class, 'indexUser'])->name('akun_pegawai');
@@ -67,7 +63,11 @@ Route::get('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'edit'
 Route::put('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'update'])->name('update_permohonan');
 
 Route::get('/monitoring_admin', [MonitoringAdminController::class, 'index'])->name('monitoring_admin');
-Route::get('/monitoring_admin/{id}', [MonitoringAdminController::class, 'edit'])->name('edit_monitoring_admin');
+Route::get('/edit_monitoring_admin/{id}', [MonitoringAdminController::class, 'edit'])->name('edit_monitoring_admin');
+
+Route::get('/profile_admin', [ProfileAdminController::class, 'index'])->name('profile_admin');
+Route::get('/profile_admin/{id}', [ProfileAdminController::class, 'edit'])->name('edit_profile_admin');
+Route::put('/update_profile_admin/{id}', [ProfileAdminController::class, 'update'])->name('update_profile_admin');
 
 
 //pegawai
@@ -84,3 +84,7 @@ Route::post('/form_monitoring', [MonitoringController::class, 'store'])->name('s
 Route::get('/edit_monitoring/{id}', [MonitoringController::class, 'edit'])->name('edit_monitoring');
 Route::put('/edit_monitoring/{id}', [MonitoringController::class, 'update'])->name('update_monitoring');
 Route::delete('/monitoring/{id}', [MonitoringController::class, 'destroy'])->name('destroy_monitoring');
+
+Route::get('/profile_user', [ProfileController::class, 'index'])->name('profile_user');
+Route::get('/profile_user/{id}', [ProfileController::class, 'edit'])->name('edit_profile_user');
+Route::put('/update_profile_user/{id}', [ProfileController::class, 'update'])->name('update_profile_user');
