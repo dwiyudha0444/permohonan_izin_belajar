@@ -5,13 +5,16 @@ namespace App\Http\Controllers\user;
 use App\Http\Controllers\Controller;
 use App\Models\Monitoring;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class MonitoringController extends Controller
 {
     public function index()
     {
-        $monitoring = Monitoring::all();
+        // Ambil ID pengguna yang sedang login
+        $userId = Auth::id();
+        $monitoring = Monitoring::where('id_users', $userId)->get();
         return view('dashboard.user.monitoring.index', compact('monitoring'));
     }
 

@@ -6,13 +6,20 @@ use App\Http\Controllers\Controller;
 use App\Models\Berkas;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class BerkasController extends Controller
 {
     public function index()
     {
-        $berkas = Berkas::all();
+        // Ambil ID pengguna yang sedang login
+        $userId = Auth::id();
+
+        // Ambil data 'Berkas' yang sesuai dengan ID pengguna
+        $berkas = Berkas::where('id_users', $userId)->get();
+
+        // Kirim data ke view
         return view('dashboard.user.berkas.index', compact('berkas'));
     }
 

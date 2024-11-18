@@ -23,7 +23,7 @@
                             <h6 class="mb-0">Edit Profile</h6>
                         </div>
                         <div class="card-body p-3">
-                            <form action="{{ route('update_profile_user', $Admin->id) }}" method="POST">
+                            <form action="{{ route('update_profile_admin', $Admin->id) }}" method="POST">
                                 @csrf
                                 @method('PUT')
                                 <div class="table-responsive">

@@ -93,7 +93,7 @@
                 </div>
                 <!-- End Header Navigation -->
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                {{-- <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav navbar-right" data-in="#" data-out="#">
                         <li class="dropdown">
@@ -108,7 +108,7 @@
                             <a href="contact.html">contact</a>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div><!-- /.navbar-collapse --> --}}
             </div>
 
             <!-- Start Side Menu -->
@@ -596,92 +596,6 @@
     </div>
     <!-- End Case Study -->
 
-    <!-- Start Pricing Area
-    ============================================= -->
-    <div id="pricing" class="pricing-area bg-theme-small default-padding bottom-less">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="site-heading text-center">
-                        <h4>pricing plan</h4>
-                        <h2>List of our pricing packages</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="pricing pricing-simple text-center">
-                    <div class="col-md-4">
-                        <div class="pricing-item">
-                            <ul>
-                                <li class="title">
-                                    <h4>Basic</h4>
-                                </li>
-                                <li class="pricing-header">
-                                    <h2><sup>$</sup>12 <sub>/ Year</sub></h2>
-                                </li>
-                                <li>Demo file</li>
-                                <li>Update</li>
-                                <li>File compressed</li>
-                                <li>Commercial use</li>
-                                <li>Support</li>
-                                <li>2 database</li>
-                                <li>Documetation</li>
-                                <li class="footer">
-                                    <a class="btn btn-dark border btn-sm" href="#">Try for free</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="pricing-item active">
-                            <ul>
-                                <li class="title">
-                                    <h4>Regular</h4>
-                                </li>
-                                <li class="pricing-header">
-                                    <h2><sup>$</sup>29 <sub>/ Year</sub></h2>
-                                    <span class="badge">Trending</span>
-                                </li>
-                                <li>Demo file</li>
-                                <li>Update</li>
-                                <li>File compressed</li>
-                                <li>Commercial use</li>
-                                <li>Support</li>
-                                <li>5 database</li>
-                                <li>Documetation</li>
-                                <li class="footer">
-                                    <a class="btn btn-light effect btn-sm" href="#">Get Started</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="pricing-item">
-                            <ul>
-                                <li class="title">
-                                    <h4>Extended</h4>
-                                </li>
-                                <li class="pricing-header">
-                                    <h2><sup>$</sup>59 <sub>/ Year</sub></h2>
-                                </li>
-                                <li>Demo file</li>
-                                <li>Update</li>
-                                <li>File compressed</li>
-                                <li>Commercial use</li>
-                                <li>Support</li>
-                                <li>8 database</li>
-                                <li>Documetation</li>
-                                <li class="footer">
-                                    <a class="btn btn-dark border btn-sm" href="#">Get Started</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Pricing Area -->
 
     <!-- Start Testimonials Area
     ============================================= -->
@@ -835,35 +749,6 @@
         </div>
     </div>
     <!-- End Blog Area -->
-
-    <!-- Start Subscribe Area
-    ============================================= -->
-    <div class="subscribe-area bg-theme text-light default-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 bg">
-                    <img src="assets2/img/bg/4.svg" alt="Thumb">
-                </div>
-                <div class="col-md-7 info">
-                    <h4>Ready to grow</h4>
-                    <h2>Subscribe today and get all the latest updates</h2>
-                    <div class="form">
-                        <form action="#">
-                            <div class="input-group stylish-input-group">
-                                <input type="email" name="email" class="form-control" placeholder="Enter your e-mail here">
-                                <span class="input-group-addon">
-                                    <button type="submit">
-                                        <i class="fa fa-paper-plane"></i>
-                                    </button>  
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Subscribe Area -->
 
     <!-- Start Footer 
     ============================================= -->

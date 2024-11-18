@@ -58,7 +58,7 @@ class ProfileAdminController extends Controller
             'updated_at' => now(),
         ]);
     
-        return redirect()->route('profile_user')
+        return redirect()->route('profile_admin')
             ->with('success', 'Data Berhasil Diperbarui');
     }
     

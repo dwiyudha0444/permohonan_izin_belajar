@@ -28,6 +28,14 @@ class Admin extends Authenticatable
         'nip',
         'email',
         'password',
+        'tgl_lahir',
+        'pangkat',
+        'tmt',
+        'jabatan',
+        'lokasi_bekerja',
+        'jejang_pendidikan',
+        'lulus_pendidikan',
+        'tugas_pekerjaan',
     ];
 
     /**
