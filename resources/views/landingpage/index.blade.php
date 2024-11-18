@@ -9,22 +9,22 @@
     <meta name="description" content="Seorun - SEO & Digital Marketing Agency Template">
 
     <!-- ========== Page Title ========== -->
-    <title>Seorun - SEO & Digital Marketing Agency Template</title>
+    <title>SIBELA</title>
 
     <!-- ========== Favicon Icon ========== -->
     <link rel="shortcut icon" href="assets2/img/favicon.png" type="image/x-icon">
 
     <!-- ========== Start Stylesheet ========== -->
-<link href="{{ asset('assets2/css/bootstrap.min.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets2/css/font-awesome.min.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets2/css/flaticon-set.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets2/css/magnific-popup.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets2/css/owl.carousel.min.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets2/css/owl.theme.default.min.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets2/css/animate.css') }}" rel="stylesheet" />
-<link href="{{ asset('assets2/css/bootsnav.css') }}" rel="stylesheet" />
-<link href="{{ asset('style.css') }}" rel="stylesheet">
-<link href="{{ asset('assets2/css/responsive.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/font-awesome.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/flaticon-set.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/magnific-popup.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/owl.carousel.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/owl.theme.default.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/animate.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets2/css/bootsnav.css') }}" rel="stylesheet" />
+    <link href="{{ asset('style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets2/css/responsive.css') }}" rel="stylesheet" />
 
     <!-- ========== End Stylesheet ========== -->
 
@@ -47,7 +47,7 @@
     <div class="se-pre-con"></div>
     <!-- Preloader Ends -->
 
-    <!-- Header 
+    <!-- Header
     ============================================= -->
     <header id="home">
 
@@ -63,7 +63,7 @@
                                 <input type="text" name="text" class="form-control" placeholder="Search">
                                 <button type="submit">
                                     <i class="fas fa-search"></i>
-                                </button>  
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
                     </ul>
-                </div>        
+                </div>
                 <!-- End Atribute Navigation -->
 
                 <!-- Start Header Navigation -->
@@ -117,8 +117,8 @@
                 <div class="widget">
                     <h4 class="title">Additional Links</h4>
                     <ul>
-                        <li><a href=" {{ route('login_admin')}}">Login Admin</a></li>
-                        <li><a href=" {{ route('login_user')}}">Login Pegawai</a></li>
+                        <li><a href=" {{ route('login_admin') }}">Login Admin</a></li>
+                        <li><a href=" {{ route('login_user') }}">Login Pegawai</a></li>
                     </ul>
                 </div>
                 <div class="widget">
@@ -130,7 +130,8 @@
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="info">
-                                    <span>Address</span> California, TX 70240
+                                    <span>Address</span> 5RVR+CMR, Kudus, Demaan, Kec. Kota Kudus, Kabupaten Kudus,
+                                    Jawa Tengah 59313
                                 </div>
                             </li>
                             <li>
@@ -152,7 +153,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="widget social">
+                {{-- <div class="widget social">
                     <h4 class="title">Connect With Us</h4>
                     <ul class="link">
                         <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -160,7 +161,7 @@
                         <li class="pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
                         <li class="dribbble"><a href="#"><i class="fab fa-dribbble"></i></a></li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
             <!-- End Side Menu -->
 
@@ -170,7 +171,7 @@
     </header>
     <!-- End Header -->
 
-    <!-- Start Banner 
+    <!-- Start Banner
     ============================================= -->
     <div class="banner-area content-double normal-text">
         <div class="box-table">
@@ -185,19 +186,16 @@
                                 <div class="content" data-animation="animated fadeInUpBig">
                                     <div class="content-bollet-carousel owl-carousel owl-theme">
                                         <div class="item">
-                                            <h1>Generate More Traffic To Your Website</h1>
+                                            <h1>Sistem Informasi Izin Belajar (SIBELA)</h1>
                                             <p>
-                                                Celebrated delightful an especially increasing instrument am. Indulgence contrasted sufficient to unpleasant in in insensible favourable.
+                                                Sistem Informasi Izin Belajar (SIBELA) digunakan untuk mempermudah
+                                                proses administrasi pengajuan izin belajar di Badan Kepegawaian dan
+                                                Pengembangan Sumber Daya Manusia. Sistem ini
+                                                bertujuan untuk mengotomatisasi, mendokumentasikan, dan mempermudah
+                                                pengelolaan data izin belajar
                                             </p>
-                                            
                                         </div>
-                                        <div class="item">
-                                            <h1>Rank you site at the top from others</h1>
-                                            <p>
-                                                Celebrated delightful an especially increasing instrument am. Indulgence contrasted sufficient to unpleasant in in insensible favourable.
-                                            </p>
-                                            
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +207,7 @@
     </div>
     <!-- End Banner -->
 
-    <!-- Start Our Features 
+    <!-- Start Our Features
     ============================================= -->
     <div class="our-feautes-area bg-theme-small inc-serial default-padding">
         <div class="container">
@@ -221,7 +219,8 @@
                             <i class="flaticon-analysis"></i>
                             <h4>Web Analytics</h4>
                             <p>
-                                Favourite tolerably engrossed. Truth short folly court why she their balls. Excellence put unaffected
+                                Favourite tolerably engrossed. Truth short folly court why she their balls. Excellence
+                                put unaffected
                             </p>
                             <a href="#">read more <i class="fas fa-angle-right"></i></a>
                         </div>
@@ -233,7 +232,8 @@
                             <i class="flaticon-objective"></i>
                             <h4>Keyword Targeting</h4>
                             <p>
-                                Favourite tolerably engrossed. Truth short folly court why she their balls. Excellence put unaffected
+                                Favourite tolerably engrossed. Truth short folly court why she their balls. Excellence
+                                put unaffected
                             </p>
                             <a href="#">read more <i class="fas fa-angle-right"></i></a>
                         </div>
@@ -245,7 +245,8 @@
                             <i class="flaticon-promotion"></i>
                             <h4>E-mail Marketing</h4>
                             <p>
-                                Favourite tolerably engrossed. Truth short folly court why she their balls. Excellence put unaffected
+                                Favourite tolerably engrossed. Truth short folly court why she their balls. Excellence
+                                put unaffected
                             </p>
                             <a href="#">read more <i class="fas fa-angle-right"></i></a>
                         </div>
@@ -257,7 +258,7 @@
     </div>
     <!-- End Our Features -->
 
-    <!-- Start Our About 
+    <!-- Start Our About
     ============================================= -->
     <div class="about-area default-padding">
         <div class="container">
@@ -268,7 +269,10 @@
                 <div class="col-md-7 info less-list">
                     <h2>We Are The World Best SEO<br> Service Company</h2>
                     <p>
-                        Pntroduced day her apartments. Fully as taste he mr do smile abode every. Luckily offered article led lasting country minutes nor old. Happen people things oh is oppose up parish effect. Law handsome old outweigh humoured far appetite. Connection has put impossible own apartments boisterous. At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on 
+                        Pntroduced day her apartments. Fully as taste he mr do smile abode every. Luckily offered
+                        article led lasting country minutes nor old. Happen people things oh is oppose up parish effect.
+                        Law handsome old outweigh humoured far appetite. Connection has put impossible own apartments
+                        boisterous. At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on
                     </p>
                     <a href="#" class="btn circle btn-theme border btn-md">Start Now</a>
                     <div class="achivement-items">
@@ -305,7 +309,7 @@
     </div>
     <!-- End Our About -->
 
-    <!-- Start SEO Test 
+    <!-- Start SEO Test
     ============================================= -->
     <div class="seo-form-area text-center bg-theme-small default-padding">
         <div class="side-bg"><img src="assets2/img/bg/2.svg" alt="Thumb"></div>
@@ -324,7 +328,8 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Enter Your Website URL ..." type="url">
+                                    <input class="form-control" placeholder="Enter Your Website URL ..."
+                                        type="url">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
@@ -343,7 +348,7 @@
     </div>
     <!-- End SEO Test -->
 
-    <!-- Start Servicese 
+    <!-- Start Servicese
     ============================================= -->
     <div class="services-area default-padding bottom-less">
         <div class="container">
@@ -366,7 +371,7 @@
                             <div class="info">
                                 <h4>Search strategy</h4>
                                 <p>
-                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded 
+                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded
                                 </p>
                             </div>
                         </div>
@@ -381,7 +386,7 @@
                             <div class="info">
                                 <h4>Onsite SEO</h4>
                                 <p>
-                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded 
+                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded
                                 </p>
                             </div>
                         </div>
@@ -396,7 +401,7 @@
                             <div class="info">
                                 <h4>Keyword Targeting</h4>
                                 <p>
-                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded 
+                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded
                                 </p>
                             </div>
                         </div>
@@ -411,7 +416,7 @@
                             <div class="info">
                                 <h4>Link building</h4>
                                 <p>
-                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded 
+                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded
                                 </p>
                             </div>
                         </div>
@@ -426,7 +431,7 @@
                             <div class="info">
                                 <h4>CPA marketing</h4>
                                 <p>
-                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded 
+                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded
                                 </p>
                             </div>
                         </div>
@@ -441,7 +446,7 @@
                             <div class="info">
                                 <h4>Report Analysis</h4>
                                 <p>
-                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded 
+                                    Guest tiled he quick by so these trees am. It announcing alteration at surrounded
                                 </p>
                             </div>
                         </div>
@@ -466,21 +471,24 @@
                                 <span>1</span>
                                 <h4>Starting With The Analysis</h4>
                                 <p>
-                                    Welcome to direction has strangers now believing. Respect enjoyed gay far exposed parlors towards.
+                                    Welcome to direction has strangers now believing. Respect enjoyed gay far exposed
+                                    parlors towards.
                                 </p>
                             </li>
                             <li>
                                 <span>2</span>
                                 <h4>Formulating The SEO Strategy</h4>
                                 <p>
-                                    Talking justice welcome message inquiry in started of am me. Led own hearted highest visited lasting sir through compass his.
+                                    Talking justice welcome message inquiry in started of am me. Led own hearted highest
+                                    visited lasting sir through compass his.
                                 </p>
                             </li>
                             <li>
                                 <span>3</span>
                                 <h4>Good Implementation</h4>
                                 <p>
-                                    Do travelling companions contrasted it. Mistress strongly remember up to. Ham him compass you proceed calling detract. Better of always missed 
+                                    Do travelling companions contrasted it. Mistress strongly remember up to. Ham him
+                                    compass you proceed calling detract. Better of always missed
                                 </p>
                             </li>
                         </ul>
@@ -526,7 +534,9 @@
                                 </div>
                                 <div class="info">
                                     <p>
-                                        Luckily offered article led lasting country minutes nor old. Happen people things oh is oppose up parish effect. Law handsome old outweigh humoured far appetite. 
+                                        Luckily offered article led lasting country minutes nor old. Happen people
+                                        things oh is oppose up parish effect. Law handsome old outweigh humoured far
+                                        appetite.
                                     </p>
                                 </div>
                             </div>
@@ -545,7 +555,9 @@
                                 </div>
                                 <div class="info">
                                     <p>
-                                        Luckily offered article led lasting country minutes nor old. Happen people things oh is oppose up parish effect. Law handsome old outweigh humoured far appetite. 
+                                        Luckily offered article led lasting country minutes nor old. Happen people
+                                        things oh is oppose up parish effect. Law handsome old outweigh humoured far
+                                        appetite.
                                     </p>
                                 </div>
                             </div>
@@ -564,7 +576,9 @@
                                 </div>
                                 <div class="info">
                                     <p>
-                                        Luckily offered article led lasting country minutes nor old. Happen people things oh is oppose up parish effect. Law handsome old outweigh humoured far appetite. 
+                                        Luckily offered article led lasting country minutes nor old. Happen people
+                                        things oh is oppose up parish effect. Law handsome old outweigh humoured far
+                                        appetite.
                                     </p>
                                 </div>
                             </div>
@@ -583,7 +597,9 @@
                                 </div>
                                 <div class="info">
                                     <p>
-                                        Luckily offered article led lasting country minutes nor old. Happen people things oh is oppose up parish effect. Law handsome old outweigh humoured far appetite. 
+                                        Luckily offered article led lasting country minutes nor old. Happen people
+                                        things oh is oppose up parish effect. Law handsome old outweigh humoured far
+                                        appetite.
                                     </p>
                                 </div>
                             </div>
@@ -605,31 +621,41 @@
                 <div class="col-md-6 intro">
                     <h2>See what our clients say</h2>
                     <p>
-                        Travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of. We so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective nor convinced residence own. Connection has put impossible own apartments boisterous.
+                        Travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way
+                        everything joy alteration boisterous the attachment. Party we years to order allow asked of. We
+                        so opinion friends me message as delight. Whole front do of plate heard oh ought. His defective
+                        nor convinced residence own. Connection has put impossible own apartments boisterous.
                     </p>
                     <a href="#" class="btn btn-theme border btn-md">View All</a>
                 </div>
                 <div class="col-md-6 testimonial-box">
                     <div class="testimonial-items">
-                        <div class="carousel slide" data-ride="carousel" data-interval="500000" id="testimonial-carousel">
+                        <div class="carousel slide" data-ride="carousel" data-interval="500000"
+                            id="testimonial-carousel">
                             <div class="carousel-inner">
                                 <div class="item active">
                                     <p>
-                                        Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal. 
+                                        Understood instrument or do connection no appearance do invitation. Dried quick
+                                        round it or order. Add past see west felt did any. Say out noise you taste merry
+                                        plate you share. My resolve arrived is we chamber be removal.
                                     </p>
                                     <h4>Junl Sarukh</h4>
                                     <span>CEO of Seorun</span>
                                 </div>
                                 <div class="item">
                                     <p>
-                                        Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal. 
+                                        Understood instrument or do connection no appearance do invitation. Dried quick
+                                        round it or order. Add past see west felt did any. Say out noise you taste merry
+                                        plate you share. My resolve arrived is we chamber be removal.
                                     </p>
                                     <h4>Anil Spia</h4>
                                     <span>Director of Seorun</span>
                                 </div>
                                 <div class="item">
                                     <p>
-                                        Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal. 
+                                        Understood instrument or do connection no appearance do invitation. Dried quick
+                                        round it or order. Add past see west felt did any. Say out noise you taste merry
+                                        plate you share. My resolve arrived is we chamber be removal.
                                     </p>
                                     <h4>Paul Munni</h4>
                                     <span>Developer of Seorun</span>
@@ -682,7 +708,8 @@
                                 <a href="#">Friendly bachelor entrance</a>
                             </h4>
                             <p>
-                                Minuter highest his arrived for put and. Hopes lived by rooms oh in no death house. Contented direction september but end led excellent ourselves may. Ferrars few arrival
+                                Minuter highest his arrived for put and. Hopes lived by rooms oh in no death house.
+                                Contented direction september but end led excellent ourselves may. Ferrars few arrival
                             </p>
                             <div class="meta">
                                 <ul>
@@ -707,7 +734,8 @@
                                 <a href="#">Perfectly did suspicion</a>
                             </h4>
                             <p>
-                                Minuter highest his arrived for put and. Hopes lived by rooms oh in no death house. Contented direction september but end led excellent ourselves may. Ferrars few arrival
+                                Minuter highest his arrived for put and. Hopes lived by rooms oh in no death house.
+                                Contented direction september but end led excellent ourselves may. Ferrars few arrival
                             </p>
                             <div class="meta">
                                 <ul>
@@ -732,7 +760,8 @@
                                 <a href="#">daughters but his intention</a>
                             </h4>
                             <p>
-                                Minuter highest his arrived for put and. Hopes lived by rooms oh in no death house. Contented direction september but end led excellent ourselves may. Ferrars few arrival
+                                Minuter highest his arrived for put and. Hopes lived by rooms oh in no death house.
+                                Contented direction september but end led excellent ourselves may. Ferrars few arrival
                             </p>
                             <div class="meta">
                                 <ul>
@@ -750,7 +779,7 @@
     </div>
     <!-- End Blog Area -->
 
-    <!-- Start Footer 
+    <!-- Start Footer
     ============================================= -->
     <footer class="default-padding-top bg-light">
         <div class="container">
@@ -787,7 +816,9 @@
                         <div class="f-item">
                             <h4>About</h4>
                             <p>
-                                Excellence decisively nay man yet impression for contrasted remarkably. There spoke happy for you are out. Fertile how old address did showing because sitting replied six. Had arose guest visit going off child she new. Passed edward two talent
+                                Excellence decisively nay man yet impression for contrasted remarkably. There spoke
+                                happy for you are out. Fertile how old address did showing because sitting replied six.
+                                Had arose guest visit going off child she new. Passed edward two talent
                             </p>
                             <div class="social">
                                 <ul>
@@ -899,4 +930,5 @@
     <script src="assets2/js/main.js"></script>
 
 </body>
+
 </html>

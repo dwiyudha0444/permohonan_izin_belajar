@@ -61,6 +61,7 @@ Route::delete('/akun_user/{id}', [AkunController::class, 'destroyUser'])->name('
 Route::get('/permohonan_izin_belajar', [PermohonanController::class, 'index'])->name('permohonan_izin_belajar');
 Route::get('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'edit'])->name('edit_permohonan');
 Route::put('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'update'])->name('update_permohonan');
+Route::get('/show_permohonan_izin_belajar/{id}', [PermohonanController::class, 'edit'])->name('show_permohonan');
 
 Route::get('/monitoring_admin', [MonitoringAdminController::class, 'index'])->name('monitoring_admin');
 Route::get('/edit_monitoring_admin/{id}', [MonitoringAdminController::class, 'edit'])->name('edit_monitoring_admin');
@@ -75,6 +76,7 @@ Route::get('/upload_berkas', [BerkasController::class, 'index'])->name('upload_b
 Route::get('/form_upload_berkas', [BerkasController::class, 'create'])->name('form_upload_berkas');
 Route::post('/form_upload_berkas', [BerkasController::class, 'store'])->name('store_form_upload_berkas');
 Route::get('/edit_upload_berkas/{id}', [BerkasController::class, 'edit'])->name('edit_upload_berkas');
+Route::get('/show_upload_berkas/{id}', [BerkasController::class, 'show'])->name('show_upload_berkas');
 Route::put('/edit_upload_berkas/{id}', [BerkasController::class, 'update'])->name('update_form_upload_berkas');
 Route::delete('/upload_berkas/{id}', [BerkasController::class, 'destroy'])->name('upload_berkas_destroy');
 

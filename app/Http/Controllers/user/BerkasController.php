@@ -35,6 +35,12 @@ class BerkasController extends Controller
         return view('dashboard.user.berkas.form_edit', compact('berkas'));
     }
 
+    public function show($id)
+    {
+        $berkas = Berkas::findOrFail($id);
+
+        return view('dashboard.user.berkas.show', compact('berkas'));
+    }
 
     public function store(Request $request)
     {

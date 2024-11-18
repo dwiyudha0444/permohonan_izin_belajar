@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-6 text-end">
                         <a class="btn bg-gradient-dark mb-0" href="{{ route('form_upload_berkas') }}"><i
-                                class="material-symbols-rounded text-sm">add</i>&nbsp;&nbsp;Add New Card</a>
+                                class="material-symbols-rounded text-sm">add</i>&nbsp;&nbsp;Add</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
 
                                     </td>
                                     <td class="align-middle text-center">
-                                        <a href="{{ route('edit_monitoring_admin', ['id' => $use->id]) }}" class="text-dark"
+                                        <a href="{{ route('edit_permohonan', ['id' => $use->id]) }}" class="text-dark"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">
                                             <i class="material-symbols-rounded cursor-pointer">edit</i>
                                         </a>
