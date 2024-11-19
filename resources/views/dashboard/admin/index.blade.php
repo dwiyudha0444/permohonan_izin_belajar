@@ -23,6 +23,8 @@
             </div>
             <hr class="dark horizontal my-0">
             <div class="card-footer p-2 ps-3">
+            
+            <p class="mb-0 text-sm">Total <span class="text-success font-weight-bolder">Pegawai</span></p>
             </div>
           </div>
         </div>

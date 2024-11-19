@@ -45,7 +45,7 @@
                                                         value="{{ old('nip', $user->email) }}" required></td>
                                             </tr>
                                             <tr>
-                                                <td><label for="tgl">Tempat Tanggal Lahir</label></td>
+                                                <td><label for="tgl">Tanggal Lahir</label></td>
                                                 <td><input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', $user->tgl_lahir) }}" required></td>
                                             </tr>
                                             <tr>

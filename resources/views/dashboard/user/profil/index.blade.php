@@ -39,12 +39,15 @@
                                         <h6 class="mb-0">Profile Information</h6>
                                     </div>
                                     <div class="col-md-4 text-end">
-                                        <a href="{{ route('edit_profile_user', ['id' => Auth::id()]) }}">
-                                            <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="Edit Profile"></i>
-                                        </a>
-
+                                        <form action="{{ route('edit_profile_user', ['id' => Auth::id()]) }}" method="GET"
+                                            style="display: inline;">
+                                            <button type="submit" class="btn btn-primary btn-sm font-weight-bold"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile">
+                                                <i class="fas fa-user-edit text-light"></i> Edit Profile
+                                            </button>
+                                        </form>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="card-body p-3">
@@ -58,8 +61,8 @@
                                         {{ Auth::user()->nip ?? 'Data tidak tersedia' }}
                                     </li>
                                     <li class="list-group-item border-0 ps-0 text-sm">
-                                        <strong class="text-dark">Tempat Tanggal Lahir:</strong> &nbsp;
-                                        {{ Auth::user()->tgl ?? 'Data tidak tersedia' }}
+                                        <strong class="text-dark">Tanggal Lahir:</strong> &nbsp;
+                                        {{ Auth::user()->tgl_lahir ?? 'Data tidak tersedia' }}
                                     </li>
                                     <li class="list-group-item border-0 ps-0 text-sm">
                                         <strong class="text-dark">Pangkat:</strong> &nbsp;

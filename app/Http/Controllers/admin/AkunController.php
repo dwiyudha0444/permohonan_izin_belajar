@@ -42,6 +42,20 @@ class AkunController extends Controller
         $user->delete();
 
         // Redirect atau response
-        return redirect()->route('akun_user')->with('success', 'Data user berhasil dihapus.');
+        return redirect()->route('akun_pegawai')->with('success', 'Data user berhasil dihapus.');
+    }
+
+    public function showAdmin($id)
+    {
+        $admin = Admin::findOrFail($id);
+
+        return view('dashboard.admin.akun.admin.show', compact('admin'));
+    }
+
+    public function showPegawai($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('dashboard.admin.akun.user.show', compact('user'));
     }
 }

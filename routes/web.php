@@ -57,11 +57,13 @@ Route::get('/akun_admin', [AkunController::class, 'indexAdmin'])->name('akun_adm
 Route::get('/akun_pegawai', [AkunController::class, 'indexUser'])->name('akun_pegawai');
 Route::delete('/akun_admin/{id}', [AkunController::class, 'destroyAdmin'])->name('akun_admin_destroy');
 Route::delete('/akun_user/{id}', [AkunController::class, 'destroyUser'])->name('akun_user_destroy');
+Route::get('/show_akun_admin/{id}', [AkunController::class, 'showAdmin'])->name('show_akun_admin');
+Route::get('/show_akun_user/{id}', [AkunController::class, 'showPegawai'])->name('show_akun_user');
 
 Route::get('/permohonan_izin_belajar', [PermohonanController::class, 'index'])->name('permohonan_izin_belajar');
 Route::get('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'edit'])->name('edit_permohonan');
 Route::put('/permohonan_izin_belajar/{id}', [PermohonanController::class, 'update'])->name('update_permohonan');
-Route::get('/show_permohonan_izin_belajar/{id}', [PermohonanController::class, 'edit'])->name('show_permohonan');
+Route::get('/show_permohonan_izin_belajar/{id}', [PermohonanController::class, 'show'])->name('show_permohonan');
 
 Route::get('/monitoring_admin', [MonitoringAdminController::class, 'index'])->name('monitoring_admin');
 Route::get('/edit_monitoring_admin/{id}', [MonitoringAdminController::class, 'edit'])->name('edit_monitoring_admin');
@@ -86,6 +88,7 @@ Route::post('/form_monitoring', [MonitoringController::class, 'store'])->name('s
 Route::get('/edit_monitoring/{id}', [MonitoringController::class, 'edit'])->name('edit_monitoring');
 Route::put('/edit_monitoring/{id}', [MonitoringController::class, 'update'])->name('update_monitoring');
 Route::delete('/monitoring/{id}', [MonitoringController::class, 'destroy'])->name('destroy_monitoring');
+Route::get('/show_monitoring/{id}', [MonitoringController::class, 'show'])->name('show_monitoring');
 
 Route::get('/profile_user', [ProfileController::class, 'index'])->name('profile_user');
 Route::get('/profile_user/{id}', [ProfileController::class, 'edit'])->name('edit_profile_user');

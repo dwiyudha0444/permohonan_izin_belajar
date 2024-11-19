@@ -96,7 +96,7 @@
 
                                     <td class="align-middle text-center">
                                         <a href="{{ route('edit_monitoring_admin', ['id' => $use->id]) }}" class="text-dark"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Show">
                                             <i class="material-symbols-rounded cursor-pointer">edit</i>
                                         </a>
 

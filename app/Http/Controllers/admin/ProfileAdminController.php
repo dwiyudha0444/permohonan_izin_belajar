@@ -17,9 +17,9 @@ class ProfileAdminController extends Controller
 
     public function edit($id)
     {
-        $Admin = Admin::findOrFail($id);
+        $admin = Admin::findOrFail($id);
 
-        return view('dashboard.admin.profil.edit', compact('Admin'));
+        return view('dashboard.admin.profil.edit', compact('admin'));
     }
 
     public function update(Request $request, $id)
@@ -40,10 +40,10 @@ class ProfileAdminController extends Controller
         ]);
     
         // Cari data Admin dengan model Eloquent
-        $Admin = Admin::findOrFail($id);
+        $admin = Admin::findOrFail($id);
     
         // Update data
-        $Admin->update([
+        $admin->update([
             'name' => $request->name,
             'email' => $request->email,
             'nip' => $request->nip,

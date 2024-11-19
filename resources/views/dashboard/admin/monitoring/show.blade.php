@@ -1,85 +1,67 @@
 @extends('dashboard.indexAdmin')
+
 @section('content')
-    <style>
-        .form-control[readonly],
-        .form-control[disabled] {
-            background-color: #f8f9fa;
-            color: #6c757d;
-            cursor: not-allowed;
-        }
-        
-        .form-group label {
-            font-weight: bold;
-        }
-
-        .card-header h4 {
-            margin-bottom: 0;
-        }
-    </style>
-    
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-gradient-dark text-white">
-                        <h4 class="text-center text-white">Monitoring</h4>
-                    </div>
-                    <div class="card-body">
-                        <form>
-
-                        
-                            <!-- PTN Field -->
-                            <div class="form-group mb-3">
-                                <label for="ptn">Nama PTN</label>
-                                <input type="text" class="form-control" id="ptn" name="ptn"
-                                    value="{{ $monitoring->ptn }}" readonly>
-                            </div>
-
-                            <!-- Transkip Nilai Semester 1 -->
-                            <div class="form-group mb-3">
-                                <label for="transkip_nilai_1">Transkip Nilai Semester 1</label>
-                                
-                                @if ($monitoring->transkip_nilai_1)
-                                    <small class="d-block mt-2">File yang ada: 
-                                        <a href="{{ asset('monitoring/assets/transkip_nilai_1/' . $monitoring->transkip_nilai_1) }}" target="_blank">Lihat</a>
-                                    </small>
-                                @endif
-                            </div>
-
-                            <!-- Transkip Nilai Semester 2 -->
-                            <div class="form-group mb-3">
-                                <label for="transkip_nilai_2">Transkip Nilai Semester 2</label>
-                                
-                                @if ($monitoring->transkip_nilai_2)
-                                    <small class="d-block mt-2">File yang ada: 
-                                        <a href="{{ asset('monitoring/assets/transkip_nilai_2/' . $monitoring->transkip_nilai_2) }}" target="_blank">Lihat</a>
-                                    </small>
-                                @endif
-                            </div>
-
-                            <!-- Transkip Nilai Semester 3 -->
-                            <div class="form-group mb-3">
-                                <label for="transkip_nilai_3">Transkip Nilai Semester 3</label>
-                                
-                                @if ($monitoring->transkip_nilai_3)
-                                    <small class="d-block mt-2">File yang ada: 
-                                        <a href="{{ asset('monitoring/assets/transkip_nilai_3/' . $monitoring->transkip_nilai_3) }}" target="_blank">Lihat</a>
-                                    </small>
-                                @endif
-                            </div>
-
-                            <!-- Transkip Nilai Semester 4 -->
-                            <div class="form-group mb-3">
-                                <label for="transkip_nilai_4">Transkip Nilai Semester 4</label>
-                                
-                                @if ($monitoring->transkip_nilai_4)
-                                    <small class="d-block mt-2">File yang ada: 
-                                        <a href="{{ asset('monitoring/assets/transkip_nilai_4/' . $monitoring->transkip_nilai_4) }}" target="_blank">Lihat</a>
-                                    </small>
-                                @endif
-                            </div>
-                        </form>
-                    </div>
+    <div class="col-md-12 mb-lg-0 mb-4">
+        <div class="card mt-4">
+            <div class="card-header pb-0 p-3">
+                <h6 class="mb-0">Detail Monitoring</h6>
+            </div>
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <table class="table align-items-center">
+                        <tbody>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Nama</th>
+                                <td class="text-sm font-weight-normal">{{ $monitoring->user->name }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Ijazah</th>
+                                <td class="text-sm font-weight-normal">
+                                    <a href="{{ asset('monitoring/assets/transkip_nilai_1/' . $monitoring->transkip_nilai_1) }}" target="_blank" class="btn btn-info btn-sm">
+                                        Lihat Foto
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Transkip Nilai</th>
+                                <td class="text-sm font-weight-normal">
+                                    <a href="{{ asset('monitoring/assets/transkip_nilai_2/' . $monitoring->transkip_nilai_2) }}" target="_blank" class="btn btn-info btn-sm">
+                                        Lihat Foto
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Penilaian Prestasi Kerja</th>
+                                <td class="text-sm font-weight-normal">
+                                    <a href="{{ asset('monitoring/assets/transkip_nilai_3/' . $monitoring->transkip_nilai_3) }}" target="_blank" class="btn btn-info btn-sm">
+                                        Lihat Foto
+                                    </a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Penilaian Prestasi Kerja</th>
+                                <td class="text-sm font-weight-normal">
+                                    <a href="{{ asset('monitoring/assets/transkip_nilai_4/' . $monitoring->transkip_nilai_4) }}" target="_blank" class="btn btn-info btn-sm">
+                                        Lihat Foto
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    PTN</th>
+                                <td class="text-sm font-weight-normal">{{ $monitoring->ptn }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-4">
+                    <a href="{{ route('monitoring_admin') }}" class="btn bg-gradient-primary">Kembali</a>
                 </div>
             </div>
         </div>

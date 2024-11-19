@@ -19,7 +19,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="">{{ Auth::user()->name }} (pegawai)</a></li>
-                        <li><a class="dropdown-item" href="{{ route('profile_user')}}">Profile</a></li>
+                        <li><a class="dropdown-item" href="{{ route('profile_user') }}">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -27,6 +27,7 @@
                     </ul>
                 </li>
             </ul>
+
 
         </div>
     </div>

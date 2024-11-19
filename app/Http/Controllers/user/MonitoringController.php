@@ -22,6 +22,12 @@ class MonitoringController extends Controller
     {
         return view('dashboard.user.monitoring.form');
     }
+    public function show($id)
+    {
+        $monitoring = Monitoring::findOrFail($id);
+
+        return view('dashboard.user.monitoring.show', compact('monitoring'));
+    }
 
     public function edit($id)
     {

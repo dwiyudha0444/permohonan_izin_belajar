@@ -22,6 +22,13 @@ class PermohonanController extends Controller
         return view('dashboard.admin.permohonan_izin_belajar.form_edit', compact('berkas'));
     }
 
+    public function show($id)
+    {
+        $berkas = Berkas::findOrFail($id);
+
+        return view('dashboard.admin.permohonan_izin_belajar.show', compact('berkas'));
+    }
+
     public function update(Request $request, $id)
     {
         $request->validate([

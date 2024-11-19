@@ -6,7 +6,7 @@
                 <div class="card my-4">
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">
-                            <h6 class="text-white text-capitalize ps-3">Authors table</h6>
+                            <h6 class="text-white text-capitalize ps-3">Akun Admin</h6>
                         </div>
                     </div>
                     <div class="card-body px-0 pb-2">
@@ -42,10 +42,10 @@
                                                 </div>
                                             </td>
                                             <td class="align-middle">
-                                                <a href="javascript:;"
+                                                <a href="{{ route('show_akun_admin', ['id' => $adm->id]) }}"
                                                     class="btn btn-primary btn-sm text-xs font-weight-bold me-1"
-                                                    data-toggle="tooltip" data-original-title="Edit user">
-                                                    Edit
+                                                    data-toggle="tooltip" data-original-title="Show">
+                                                    Show
                                                 </a>
 
                                                 <form action="{{ route('akun_admin_destroy', $adm->id) }}" method="POST"

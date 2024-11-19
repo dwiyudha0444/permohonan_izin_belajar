@@ -39,13 +39,15 @@
                                         <h6 class="mb-0">Profile Information</h6>
                                     </div>
                                     <div class="col-md-4 text-end">
-                                        <a href="{{ route('edit_profile_admin', ['id' => Auth::guard('admin')->id()]) }}">
-                                            <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip"
-                                                data-bs-placement="top" title="Edit Profile"></i>
-                                        </a>
-
-
+                                        <form action="{{ route('edit_profile_admin', ['id' => Auth::guard('admin')->id()]) }}"
+                                            method="GET" style="display: inline;">
+                                            <button type="submit" class="btn btn-primary btn-sm font-weight-bold"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile">
+                                                <i class="fas fa-user-edit text-light"></i> Edit Profile
+                                            </button>
+                                        </form>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="card-body p-3">
@@ -59,8 +61,8 @@
                                         {{ Auth::guard('admin')->user()->nip ?? 'Data tidak tersedia' }}
                                     </li>
                                     <li class="list-group-item border-0 ps-0 text-sm">
-                                        <strong class="text-dark">Tempat Tanggal Lahir:</strong> &nbsp;
-                                        {{ Auth::guard('admin')->user()->tgl ?? 'Data tidak tersedia' }}
+                                        <strong class="text-dark">Tanggal Lahir:</strong> &nbsp;
+                                        {{ Auth::guard('admin')->user()->tgl_lahir ?? 'Data tidak tersedia' }}
                                     </li>
                                     <li class="list-group-item border-0 ps-0 text-sm">
                                         <strong class="text-dark">Pangkat:</strong> &nbsp;
@@ -113,7 +115,7 @@
                         for a better web.
                     </div>
                 </div>
-                <div class="col-lg-6">
+                {{-- <div class="col-lg-6">
                     <ul class="nav nav-footer justify-content-center justify-content-lg-end">
                         <li class="nav-item">
                             <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative
@@ -131,7 +133,7 @@
                                 target="_blank">License</a>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
     </footer>

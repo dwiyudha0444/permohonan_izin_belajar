@@ -20,4 +20,12 @@ class MonitoringAdminController extends Controller
 
         return view('dashboard.admin.monitoring.show', compact('monitoring'));
     }
+
+    public function show($id)
+    {
+        $monitoring = Monitoring::findOrFail($id);
+
+        return view('dashboard.admin.monitoring.show', compact('monitoring'));
+    }
+
 }

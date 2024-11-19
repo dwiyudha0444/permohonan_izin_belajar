@@ -1,4 +1,4 @@
-@extends('dashboard.indexUser')
+@extends('dashboard.indexAdmin')
 
 @section('content')
     <div class="col-md-12 mb-lg-0 mb-4">
@@ -61,7 +61,7 @@
                     </table>
                 </div>
                 <div class="mt-4">
-                    <a href="{{ route('upload_berkas') }}" class="btn bg-gradient-primary">Kembali</a>
+                    <a href="{{ route('permohonan_izin_belajar') }}" class="btn bg-gradient-primary">Kembali</a>
                 </div>
             </div>
         </div>

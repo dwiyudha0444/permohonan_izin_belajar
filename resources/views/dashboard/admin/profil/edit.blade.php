@@ -23,7 +23,7 @@
                             <h6 class="mb-0">Edit Profile</h6>
                         </div>
                         <div class="card-body p-3">
-                            <form action="{{ route('update_profile_admin', $Admin->id) }}" method="POST">
+                            <form action="{{ route('update_profile_admin', $admin->id) }}" method="POST">
                                 @csrf
                                 @method('PUT')
                                 <div class="table-responsive">
@@ -32,63 +32,63 @@
                                             <tr>
                                                 <td><label for="name">Full Name</label></td>
                                                 <td><input type="text" class="form-control" id="name" name="name"
-                                                        value="{{ old('name', $Admin->name) }}" required></td>
+                                                        value="{{ old('name', $admin->name) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="nip">NIP</label></td>
                                                 <td><input type="text" class="form-control" id="nip" name="nip"
-                                                        value="{{ old('nip', $Admin->nip) }}" required></td>
+                                                        value="{{ old('nip', $admin->nip) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="nip">Email</label></td>
                                                 <td><input type="text" class="form-control" id="nip" name="email"
-                                                        value="{{ old('nip', $Admin->email) }}" required></td>
+                                                        value="{{ old('email', $admin->email) }}" required></td>
                                             </tr>
                                             <tr>
-                                                <td><label for="tgl">Tempat Tanggal Lahir</label></td>
-                                                <td><input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', $Admin->tgl_lahir) }}" required></td>
+                                                <td><label for="tgl">Tanggal Lahir</label></td>
+                                                <td><input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', $admin->tgl_lahir) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="pangkat">Pangkat</label></td>
                                                 <td><input type="text" class="form-control" id="pangkat" name="pangkat"
-                                                        value="{{ old('pangkat', $Admin->pangkat) }}" required></td>
+                                                        value="{{ old('pangkat', $admin->pangkat) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="jabatan">TMT</label></td>
                                                 <td><input type="text" class="form-control" id="tmt" name="tmt"
-                                                        value="{{ old('jabatan', $Admin->tmt) }}" required></td>
+                                                        value="{{ old('jabatan', $admin->tmt) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="jabatan">Jabatan</label></td>
                                                 <td><input type="text" class="form-control" id="jabatan" name="jabatan"
-                                                        value="{{ old('jabatan', $Admin->jabatan) }}" required></td>
+                                                        value="{{ old('jabatan', $admin->jabatan) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="lokasi_bekerja">Lokasi Tempat Bekerja</label></td>
                                                 <td><input type="text" class="form-control" id="lokasi_bekerja"
                                                         name="lokasi_bekerja"
-                                                        value="{{ old('lokasi_bekerja', $Admin->lokasi_bekerja) }}" required>
+                                                        value="{{ old('lokasi_bekerja', $admin->lokasi_bekerja) }}" required>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td><label for="jejang_pendidikan">Jenjang Pendidikan</label></td>   
                                                 <td><input type="text" class="form-control" id="jejang_pendidikan"
                                                         name="jejang_pendidikan"
-                                                        value="{{ old('jejang_pendidikan', $Admin->jejang_pendidikan) }}"
+                                                        value="{{ old('jejang_pendidikan', $admin->jejang_pendidikan) }}"
                                                         required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="lulus_pendidikan">Lulusan Pendidikan Terakhir</label></td>
                                                 <td><input type="text" class="form-control" id="lulus_pendidikan"
                                                         name="lulus_pendidikan"
-                                                        value="{{ old('lulus_pendidikan', $Admin->lulus_pendidikan) }}"
+                                                        value="{{ old('lulus_pendidikan', $admin->lulus_pendidikan) }}"
                                                         required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="tugas_pekerjaan">Tugas Pendidikan</label></td>
                                                 <td><input type="text" class="form-control" id="tugas_pekerjaan"
                                                         name="tugas_pekerjaan"
-                                                        value="{{ old('tugas_pekerjaan', $Admin->tugas_pekerjaan) }}"
+                                                        value="{{ old('tugas_pekerjaan', $admin->tugas_pekerjaan) }}"
                                                         required></td>
                                             </tr>
                                         </tbody>
