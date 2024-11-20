@@ -8,18 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Berkas extends Model
 {
     protected $table = 'berkas';
-    
+
     protected $fillable = [
-        'id_users', 
+        'id_users',
         'ijazah',
         'transkip_nilai',
         'penilaian_prestasi_kerja',
-        'jadwal_pendidikan',  
+        'jadwal_pendidikan',
         'status',
         'peguruan_tinggi',
         'jurusan',
-        'alamat'
-
+        'alamat',
+        'keterangan'
     ];
 
     public function user()

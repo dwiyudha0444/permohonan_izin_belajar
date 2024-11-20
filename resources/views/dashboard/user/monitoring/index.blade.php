@@ -123,7 +123,7 @@
                                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                                 <i class="material-symbols-rounded text-dark cursor-pointer"
                                                     data-bs-toggle="tooltip" data-bs-placement="top"
-                                                    title="Hapus Card">delete</i>
+                                                    title="Hapus">delete</i>
                                             </button>
                                         </form>
                                     </td>

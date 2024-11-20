@@ -107,6 +107,13 @@
                                 </select>
                             </div>
 
+                            <!-- Jadwal Pendidikan -->
+                            <div class="form-group mb-3">
+                                <label for="keterangan">Keterangan</label>
+                                <input type="text" class="form-control" id="keterangan" name="keterangan"
+                                    value="{{ $berkas->keterangan }}" >
+                            </div>
+
                             <!-- Button Update -->
                             <div class="text-center">
                                 <button type="submit" class="btn btn-dark w-100">Update</button>

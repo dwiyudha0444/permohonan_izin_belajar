@@ -35,6 +35,7 @@ class PermohonanController extends Controller
             'id_users' => 'required',
             'jadwal_pendidikan' => 'required',
             'status' => 'required',
+            'keterangan' => 'nullable',
         ]);
     
         // Temukan data yang akan diupdate
@@ -53,6 +54,7 @@ class PermohonanController extends Controller
             'penilaian_prestasi_kerja' => $prestasiFile,
             'jadwal_pendidikan' => $request->jadwal_pendidikan,
             'status' => $request->status,
+            'keterangan' => $request->keterangan,
             'updated_at' => now(),
         ]);
     

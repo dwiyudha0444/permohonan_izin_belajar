@@ -57,6 +57,15 @@
                                     </span>
                                 </td>
                             </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Keterangan</th>
+                                <td class="text-sm font-weight-normal">
+                                    <span>
+                                        {{ $berkas->keterangan }}
+                                    </span>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
