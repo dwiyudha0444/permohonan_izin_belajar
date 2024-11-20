@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Models\OPD;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,10 +18,13 @@ class ProfileController extends Controller
 
     public function edit($id)
     {
-        $user = User::findOrFail($id);
-
-        return view('dashboard.user.profil.form_edit', compact('user'));
+        $user = User::findOrFail($id); // Cari user berdasarkan ID
+        $opds = OPD::all(); // Ambil semua data OPD untuk dropdown
+    
+        return view('dashboard.user.profil.form_edit', compact('user', 'opds'));
     }
+    
+    
 
     public function update(Request $request, $id)
     {
@@ -40,6 +44,7 @@ class ProfileController extends Controller
             'peguruan_tinggi' => 'nullable|string|max:255',
             'jurusan' => 'nullable|string|max:255',
             'alamat' => 'nullable|string|max:255',
+            'id_opd' => 'nullable',        
         ]);
     
         // Cari data user dengan model Eloquent
@@ -61,6 +66,7 @@ class ProfileController extends Controller
             'peguruan_tinggi' => $request->peguruan_tinggi,
             'jurusan' => $request->jurusan,
             'alamat' => $request->alamat,
+            'id_opd' => $request->id_opd,
             'updated_at' => now(),
         ]);
     

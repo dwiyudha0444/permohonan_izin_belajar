@@ -46,7 +46,9 @@
                                             </tr>
                                             <tr>
                                                 <td><label for="tgl">Tanggal Lahir</label></td>
-                                                <td><input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', $admin->tgl_lahir) }}" required></td>
+                                                <td><input type="date" class="form-control" id="tgl_lahir"
+                                                        name="tgl_lahir" value="{{ old('tgl_lahir', $admin->tgl_lahir) }}"
+                                                        required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="pangkat">Pangkat</label></td>
@@ -67,11 +69,12 @@
                                                 <td><label for="lokasi_bekerja">Lokasi Tempat Bekerja</label></td>
                                                 <td><input type="text" class="form-control" id="lokasi_bekerja"
                                                         name="lokasi_bekerja"
-                                                        value="{{ old('lokasi_bekerja', $admin->lokasi_bekerja) }}" required>
+                                                        value="{{ old('lokasi_bekerja', $admin->lokasi_bekerja) }}"
+                                                        required>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><label for="jejang_pendidikan">Jenjang Pendidikan</label></td>   
+                                                <td><label for="jejang_pendidikan">Jenjang Pendidikan</label></td>
                                                 <td><input type="text" class="form-control" id="jejang_pendidikan"
                                                         name="jejang_pendidikan"
                                                         value="{{ old('jejang_pendidikan', $admin->jejang_pendidikan) }}"
@@ -100,18 +103,31 @@
                                             </tr>
                                             <tr>
                                                 <td><label for="jurusan">Jurusan</label></td>
-                                                <td><input type="text" class="form-control" id="jurusan"
-                                                        name="jurusan"
-                                                        value="{{ old('jurusan', $admin->jurusan) }}"
-                                                        required></td>
+                                                <td><input type="text" class="form-control" id="jurusan" name="jurusan"
+                                                        value="{{ old('jurusan', $admin->jurusan) }}" required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="alamat">Alamat</label></td>
                                                 <td><input type="text" class="form-control" id="alamat"
-                                                        name="alamat"
-                                                        value="{{ old('alamat', $admin->alamat) }}"
+                                                        name="alamat" value="{{ old('alamat', $admin->alamat) }}"
                                                         required></td>
                                             </tr>
+
+                                            <tr>
+                                                <td><label for="id_opd">OPD</label></td>
+                                                <td>
+                                                    <select class="form-control" id="id_opd" name="id_opd" required>
+                                                        <option value="" disabled selected>Pilih OPD</option>
+                                                        @foreach ($opds as $opd)
+                                                            <option value="{{ $opd->id }}"
+                                                                {{ old('id_opd', $admin->id_opd) == $opd->id ? 'selected' : '' }}>
+                                                                {{ $opd->opd }}
+                                                            </option>
+                                                        @endforeach
+                                                    </select>
+                                                </td>
+                                            </tr>
+
                                         </tbody>
                                     </table>
                                 </div>

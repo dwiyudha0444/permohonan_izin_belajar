@@ -34,12 +34,12 @@
                 </a>
             </li>
             
-            {{-- <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/virtual-reality.html">
+            <li class="nav-item">
+          <a class="nav-link text-dark" href="{{ route('opd_admin') }}">
             <i class="material-symbols-rounded opacity-5">view_in_ar</i>
-            <span class="nav-link-text ms-1">Virtual Reality</span>
+            <span class="nav-link-text ms-1">OPD</span>
           </a>
-        </li> --}}
+        </li>
             {{-- <li class="nav-item">
           <a class="nav-link text-dark" href="../pages/rtl.html">
             <i class="material-symbols-rounded opacity-5">format_textdirection_r_to_l</i>

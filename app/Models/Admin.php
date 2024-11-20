@@ -38,7 +38,8 @@ class Admin extends Authenticatable
         'tugas_pekerjaan',
         'peguruan_tinggi',
         'alamat',
-        'jurusan'
+        'jurusan',
+        'id_opd'
     ];
 
     /**
@@ -60,4 +61,9 @@ class Admin extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function opd()
+    {
+        return $this->belongsTo(OPD::class, 'id_opd', 'id');
+    }
 }

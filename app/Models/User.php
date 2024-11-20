@@ -32,7 +32,8 @@ class User extends Authenticatable
         'tugas_pekerjaan',
         'peguruan_tinggi',
         'alamat',
-        'jurusan'
+        'jurusan',
+        'id_opd'
     ];
     
 
@@ -65,4 +66,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Monitoring::class, 'id_users', 'id');
     }
+
+    public function opd()
+    {
+        return $this->belongsTo(OPD::class, 'id_opd', 'id');
+    }
+    
 }

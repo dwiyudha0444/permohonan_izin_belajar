@@ -11,6 +11,7 @@ use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\admin\DashboardAdminController;
 use App\Http\Controllers\admin\PermohonanController;
 use App\Http\Controllers\admin\MonitoringAdminController;
+use App\Http\Controllers\admin\OPDController;
 use App\Http\Controllers\admin\ProfileAdminController;
 //user
 use App\Http\Controllers\user\DashboardUserController;
@@ -72,6 +73,10 @@ Route::get('/profile_admin', [ProfileAdminController::class, 'index'])->name('pr
 Route::get('/profile_admin/{id}', [ProfileAdminController::class, 'edit'])->name('edit_profile_admin');
 Route::put('/update_profile_admin/{id}', [ProfileAdminController::class, 'update'])->name('update_profile_admin');
 
+Route::get('/opd_admin', [OPDController::class, 'index'])->name('opd_admin');
+Route::delete('/opd_admin/{id}', [OPDController::class, 'destroy'])->name('destroy_opd_admin');
+Route::post('/form_opd_admin', [OPDController::class, 'store'])->name('store_opd_admin');
+Route::get('/form_opd_admin', [OPDController::class, 'create'])->name('create_opd_admin');
 
 //pegawai
 Route::get('/upload_berkas', [BerkasController::class, 'index'])->name('upload_berkas');

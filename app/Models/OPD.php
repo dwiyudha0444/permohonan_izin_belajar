@@ -7,18 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class OPD extends Model
 {
-    protected $table = 'berkas';
+    protected $table = 'tbopd';
 
     protected $fillable = [
-        'id_users',
-        'ijazah',
-        'transkip_nilai',
-        'penilaian_prestasi_kerja',
-        'jadwal_pendidikan',
-        'status',
-        'peguruan_tinggi',
-        'jurusan',
-        'alamat',
-        'keterangan'
+        'opd'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_opd', 'id');
+    }
+
+    public function opd()
+    {
+        return $this->belongsTo(Admin::class, 'id_opd', 'id');
+    }
 }
