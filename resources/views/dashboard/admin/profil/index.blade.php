@@ -92,6 +92,19 @@
                                         <strong class="text-dark">Tugas Pekerjaan yang saya tangani saat ini:</strong>
                                         &nbsp; {{ Auth::guard('admin')->user()->tugas_pekerjaan ?? 'Data tidak tersedia' }}
                                     </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Peguruan Tinggi:</strong>
+                                        &nbsp; {{ Auth::guard('admin')->user()->peguruan_tinggi ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Jurusan:</strong>
+                                        &nbsp; {{ Auth::guard('admin')->user()->jurusan ?? 'Data tidak tersedia' }}
+                                    </li>
+                                    <li class="list-group-item border-0 ps-0 text-sm">
+                                        <strong class="text-dark">Alamat:</strong>
+                                        &nbsp; {{ Auth::guard('admin')->user()->alamat ?? 'Data tidak tersedia' }}
+                                    </li>
+
                                 </ul>
 
                             </div>

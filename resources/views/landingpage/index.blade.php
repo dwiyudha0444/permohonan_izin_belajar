@@ -139,7 +139,7 @@
                                     <i class="fas fa-envelope-open"></i>
                                 </div>
                                 <div class="info">
-                                    <span>Email</span> info@gmail.com
+                                    <span>Email</span> bksdm@kuduskab.go.id
                                 </div>
                             </li>
                             <li>
@@ -147,7 +147,7 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="info">
-                                    <span>Phone</span> +123 456 7890
+                                    <span>Phone</span> (0291) 438415
                                 </div>
                             </li>
                         </ul>
@@ -180,7 +180,7 @@
                     <div class="row">
                         <div class="double-items">
                             <div class="col-md-6 thumb">
-                                <img src="assets2/img/800x600.png" alt="Thumb">
+                                <img src="assets2/img/bg1.jpg" alt="Thumb">
                             </div>
                             <div class="col-md-6 text-medium conetnt-lead">
                                 <div class="content" data-animation="animated fadeInUpBig">

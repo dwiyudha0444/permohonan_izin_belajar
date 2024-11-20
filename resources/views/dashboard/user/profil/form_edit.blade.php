@@ -46,7 +46,9 @@
                                             </tr>
                                             <tr>
                                                 <td><label for="tgl">Tanggal Lahir</label></td>
-                                                <td><input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value="{{ old('tgl_lahir', $user->tgl_lahir) }}" required></td>
+                                                <td><input type="date" class="form-control" id="tgl_lahir"
+                                                        name="tgl_lahir" value="{{ old('tgl_lahir', $user->tgl_lahir) }}"
+                                                        required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="pangkat">Pangkat</label></td>
@@ -67,11 +69,12 @@
                                                 <td><label for="lokasi_bekerja">Lokasi Tempat Bekerja</label></td>
                                                 <td><input type="text" class="form-control" id="lokasi_bekerja"
                                                         name="lokasi_bekerja"
-                                                        value="{{ old('lokasi_bekerja', $user->lokasi_bekerja) }}" required>
+                                                        value="{{ old('lokasi_bekerja', $user->lokasi_bekerja) }}"
+                                                        required>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><label for="jejang_pendidikan">Jenjang Pendidikan</label></td>   
+                                                <td><label for="jejang_pendidikan">Jenjang Pendidikan</label></td>
                                                 <td><input type="text" class="form-control" id="jejang_pendidikan"
                                                         name="jejang_pendidikan"
                                                         value="{{ old('jejang_pendidikan', $user->jejang_pendidikan) }}"
@@ -91,6 +94,25 @@
                                                         value="{{ old('tugas_pekerjaan', $user->tugas_pekerjaan) }}"
                                                         required></td>
                                             </tr>
+                                            <tr>
+                                                <td><label for="peguruan_tinggi">Peguruan Tinggi</label></td>
+                                                <td><input type="text" class="form-control" id="peguruan_tinggi"
+                                                        name="peguruan_tinggi"
+                                                        value="{{ old('peguruan_tinggi', $user->peguruan_tinggi) }}"
+                                                        required></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="jurusan">Jurusan</label></td>
+                                                <td><input type="text" class="form-control" id="jurusan" name="jurusan"
+                                                        value="{{ old('jurusan', $user->jurusan) }}" required></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="alamat">Alamat</label></td>
+                                                <td><input type="text" class="form-control" id="alamat"
+                                                        name="alamat" value="{{ old('alamat', $user->alamat) }}"
+                                                        required></td>
+                                            </tr>
+
                                         </tbody>
                                     </table>
                                 </div>

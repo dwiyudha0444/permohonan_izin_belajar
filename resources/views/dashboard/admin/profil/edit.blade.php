@@ -91,6 +91,27 @@
                                                         value="{{ old('tugas_pekerjaan', $admin->tugas_pekerjaan) }}"
                                                         required></td>
                                             </tr>
+                                            <tr>
+                                                <td><label for="peguruan_tinggi">Peguruan Tinggi</label></td>
+                                                <td><input type="text" class="form-control" id="peguruan_tinggi"
+                                                        name="peguruan_tinggi"
+                                                        value="{{ old('peguruan_tinggi', $admin->peguruan_tinggi) }}"
+                                                        required></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="jurusan">Jurusan</label></td>
+                                                <td><input type="text" class="form-control" id="jurusan"
+                                                        name="jurusan"
+                                                        value="{{ old('jurusan', $admin->jurusan) }}"
+                                                        required></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label for="alamat">Alamat</label></td>
+                                                <td><input type="text" class="form-control" id="alamat"
+                                                        name="alamat"
+                                                        value="{{ old('alamat', $admin->alamat) }}"
+                                                        required></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>

@@ -37,6 +37,9 @@ class ProfileAdminController extends Controller
             'jejang_pendidikan' => 'nullable|string|max:255',
             'lulus_pendidikan' => 'nullable|string|max:255',
             'tugas_pekerjaan' => 'nullable|string|max:255',
+            'peguruan_tinggi' => 'nullable|string|max:255',
+            'jurusan' => 'nullable|string|max:255',
+            'alamat' => 'nullable|string|max:255',
         ]);
     
         // Cari data Admin dengan model Eloquent
@@ -55,6 +58,9 @@ class ProfileAdminController extends Controller
             'jejang_pendidikan' => $request->jejang_pendidikan,
             'lulus_pendidikan' => $request->lulus_pendidikan,
             'tugas_pekerjaan' => $request->tugas_pekerjaan,
+            'peguruan_tinggi' => $request->peguruan_tinggi,
+            'jurusan' => $request->jurusan,
+            'alamat' => $request->alamat,
             'updated_at' => now(),
         ]);
     

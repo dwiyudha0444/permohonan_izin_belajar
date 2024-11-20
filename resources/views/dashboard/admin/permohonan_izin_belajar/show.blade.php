@@ -19,7 +19,8 @@
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Ijazah</th>
                                 <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('berkas/assets/ijazah/' . $berkas->ijazah) }}" target="_blank" class="btn btn-info btn-sm">
+                                    <a href="{{ asset('berkas/assets/ijazah/' . $berkas->ijazah) }}" target="_blank"
+                                        class="btn btn-info btn-sm">
                                         Lihat Foto
                                     </a>
                                 </td>
@@ -28,7 +29,8 @@
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Transkip Nilai</th>
                                 <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('berkas/assets/transkip_nilai/' . $berkas->transkip_nilai) }}" target="_blank" class="btn btn-info btn-sm">
+                                    <a href="{{ asset('berkas/assets/transkip_nilai/' . $berkas->transkip_nilai) }}"
+                                        target="_blank" class="btn btn-info btn-sm">
                                         Lihat Foto
                                     </a>
                                 </td>
@@ -37,7 +39,8 @@
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Penilaian Prestasi Kerja</th>
                                 <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('berkas/assets/penilaian_presentasi_kerja/' . $berkas->penilaian_prestasi_kerja) }}" target="_blank" class="btn btn-info btn-sm">
+                                    <a href="{{ asset('berkas/assets/penilaian_presentasi_kerja/' . $berkas->penilaian_prestasi_kerja) }}"
+                                        target="_blank" class="btn btn-info btn-sm">
                                         Lihat Foto
                                     </a>
                                 </td>
@@ -51,7 +54,8 @@
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Status</th>
                                 <td class="text-sm font-weight-normal">
-                                    <span style="background-color: {{ $berkas->status === 'proses' ? 'blue' : ($berkas->status === 'terverifikasi' ? 'green' : 'gray') }};
+                                    <span
+                                        style="background-color: {{ $berkas->status === 'proses' ? 'blue' : ($berkas->status === 'terverifikasi' ? 'green' : 'gray') }};
                                         color: white; padding: 5px 10px; border-radius: 5px;">
                                         {{ $berkas->status }}
                                     </span>
@@ -59,13 +63,19 @@
                             </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                    Keterangan</th>
+                                    Keterangan
+                                </th>
                                 <td class="text-sm font-weight-normal">
                                     <span>
-                                        {{ $berkas->keterangan }}
+                                        @if ($berkas->keterangan)
+                                            {{ $berkas->keterangan }}
+                                        @else
+                                            Keterangan belum ada
+                                        @endif
                                     </span>
                                 </td>
                             </tr>
+
                         </tbody>
                     </table>
                 </div>

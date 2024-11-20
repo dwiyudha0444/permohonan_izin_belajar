@@ -30,6 +30,9 @@ class User extends Authenticatable
         'jejang_pendidikan',
         'lulus_pendidikan',
         'tugas_pekerjaan',
+        'peguruan_tinggi',
+        'alamat',
+        'jurusan'
     ];
     
 
