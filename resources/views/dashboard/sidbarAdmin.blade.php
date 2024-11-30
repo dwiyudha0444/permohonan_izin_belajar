@@ -7,7 +7,7 @@
             target="_blank">
             <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img" width="26" height="26"
                 alt="main_logo">
-            <span class="ms-1 text-sm text-dark">Creative Tim</span>
+            <span class="ms-1 text-sm text-dark">{{ Auth::guard('admin')->user()->name }} (admin)</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0 mb-2">

@@ -7,18 +7,26 @@
             target="_blank">
             <img src="../assets/img/logo-ct-dark.png" class="navbar-brand-img" width="26" height="26"
                 alt="main_logo">
-            <span class="ms-1 text-sm text-dark">Creative Tim</span>
+            <span class="ms-1 text-sm text-dark">{{ Auth::user()->name }} (pegawai)</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0 mb-2">
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link active bg-gradient-dark text-white" href="dashboard_user">
                     <i class="material-symbols-rounded opacity-5">dashboard</i>
                     <span class="nav-link-text ms-1">Dashboard</span>
                 </a>
+            </li> --}}
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="{{ route('profile_user') }}">
+                    <i class="material-symbols-rounded opacity-5">person</i>
+                    <span class="nav-link-text ms-1">Data Diri</span>
+                </a>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link text-dark" href="{{ route('upload_berkas') }}">
                     <i class="material-symbols-rounded opacity-5">table_view</i>
@@ -27,18 +35,13 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{{ route('monitoring')}}">
+                <a class="nav-link text-dark" href="{{ route('monitoring') }}">
                     <i class="material-symbols-rounded opacity-5">receipt_long</i>
                     <span class="nav-link-text ms-1">Monitoring</span>
                 </a>
             </li>
 
-            {{-- <li class="nav-item">
-          <a class="nav-link text-dark" href="../pages/virtual-reality.html">
-            <i class="material-symbols-rounded opacity-5">view_in_ar</i>
-            <span class="nav-link-text ms-1">Virtual Reality</span>
-          </a>
-        </li> --}}
+
             {{-- <li class="nav-item">
           <a class="nav-link text-dark" href="../pages/rtl.html">
             <i class="material-symbols-rounded opacity-5">format_textdirection_r_to_l</i>

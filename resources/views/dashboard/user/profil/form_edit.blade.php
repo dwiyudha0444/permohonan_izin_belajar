@@ -4,17 +4,7 @@
     <div class="container-fluid px-2 px-md-4">
         <div class="card card-body mx-2 mx-md-2 mt-n6">
             <div class="row gx-4 mb-2">
-                {{-- <div class="col-auto">
-                    <div class="avatar avatar-xl position-relative">
-                        <img src="../assets/img/bruce-mars.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
-                    </div>
-                </div>
-                <div class="col-auto my-auto">
-                    <div class="h-100">
-                        <h5 class="mb-1">{{ Auth::user()->name }}</h5>
-                        <p class="mb-0 font-weight-normal text-sm">{{ Auth::user()->jabatan }}</p>
-                    </div>
-                </div> --}}
+                
             </div>
             <div class="row">
                 <div class="col-12 col-xl-12">

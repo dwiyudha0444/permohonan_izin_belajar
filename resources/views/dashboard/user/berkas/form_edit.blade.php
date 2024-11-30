@@ -91,8 +91,14 @@
                             <!-- Jadwal Pendidikan -->
                             <div class="form-group mb-3">
                                 <label for="jadwal_pendidikan">Jadwal Pendidikan</label>
-                                <input type="date" class="form-control" id="jadwal_pendidikan" name="jadwal_pendidikan"
-                                    value="{{ $berkas->jadwal_pendidikan }}" required>
+                                <input type="file" class="form-control" id="jadwal_pendidikan"
+                                    name="jadwal_pendidikan" accept="image/*">
+                                <!-- Menampilkan file yang sudah ada jika tidak diubah -->
+                                @if ($berkas->jadwal_pendidikan)
+                                    <small class="d-block mt-2">Jadwal pendidikan yang ada: <a
+                                            href="{{ asset('berkas/assets/jadwal_pendidikan/' . $berkas->jadwal_pendidikan) }}"
+                                            target="_blank">Lihat</a></small>
+                                @endif
                             </div>
 
                             <div class="form-group mb-3">

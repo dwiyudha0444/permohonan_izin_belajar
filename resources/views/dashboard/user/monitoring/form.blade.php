@@ -41,28 +41,28 @@
                             <div class="form-group mb-3">
                                 <label for="transkip_nilai_1">Transkip Nilai Semester 1</label>
                                 <input type="file" class="form-control" id="transkip_nilai_1" name="transkip_nilai_1"
-                                    accept="image/*" required>
+                                    accept="image/*">
                             </div>
 
                             <!-- Transkip Nilai -->
                             <div class="form-group mb-3">
                                 <label for="transkip_nilai_2">Transkip Nilai Semester 2</label>
                                 <input type="file" class="form-control" id="transkip_nilai_2" name="transkip_nilai_2"
-                                    accept="image/*" required>
+                                    accept="image/*" >
                             </div>
 
                             <!-- Penilaian Prestasi Kerja -->
                             <div class="form-group mb-3">
                                 <label for="transkip_nilai_3">Transkip Nilai Semester 3</label>
                                 <input type="file" class="form-control" id="transkip_nilai_3"
-                                    name="transkip_nilai_3" accept="image/*" required>
+                                    name="transkip_nilai_3" accept="image/*" >
                             </div>
 
                             <!-- Penilaian Prestasi Kerja -->
                             <div class="form-group mb-3">
                                 <label for="transkip_nilai_4">Transkip Nilai Semester 4</label>
                                 <input type="file" class="form-control" id="transkip_nilai_4" name="transkip_nilai_4"
-                                    accept="image/*" required>
+                                    accept="image/*">
                             </div>
 
                             <!-- Button Simpan -->

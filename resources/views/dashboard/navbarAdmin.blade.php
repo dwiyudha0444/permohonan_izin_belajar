@@ -18,7 +18,7 @@
                         <i class="material-symbols-rounded">account_circle</i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">{{ Auth::guard('admin')->user()->name }} (admin)</a></li>
+                        <li><span><a class="dropdown-item" href="">{{ Auth::guard('admin')->user()->name }} (admin)</a></span></li>
                         <li><a class="dropdown-item" href="{{ route('profile_admin')}}">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">

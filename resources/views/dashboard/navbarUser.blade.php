@@ -18,7 +18,7 @@
                         <i class="material-symbols-rounded">account_circle</i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="">{{ Auth::user()->name }} (pegawai)</a></li>
+                        <span class="dropdown-item">{{ Auth::user()->name }} (pegawai)</span>
                         <li><a class="dropdown-item" href="{{ route('profile_user') }}">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">

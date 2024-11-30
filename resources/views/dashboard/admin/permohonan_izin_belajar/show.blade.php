@@ -48,7 +48,12 @@
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Jadwal Pendidikan</th>
-                                <td class="text-sm font-weight-normal">{{ $berkas->jadwal_pendidikan }}</td>
+                                <td class="text-sm font-weight-normal">
+                                    <a href="{{ asset('berkas/assets/jadwal_pendidikan/' . $berkas->jadwal_pendidikan) }}"
+                                        target="_blank" class="btn btn-info btn-sm">
+                                        Lihat Foto
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">

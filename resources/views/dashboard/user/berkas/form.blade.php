@@ -73,7 +73,7 @@
                             <!-- Jadwal Pendidikan -->
                             <div class="form-group mb-3">
                                 <label for="jadwal_pendidikan">Jadwal Pendidikan</label>
-                                <input type="date" class="form-control" id="jadwal_pendidikan" name="jadwal_pendidikan"
+                                <input type="file" class="form-control" id="jadwal_pendidikan" name="jadwal_pendidikan"
                                     required>
                             </div>
 

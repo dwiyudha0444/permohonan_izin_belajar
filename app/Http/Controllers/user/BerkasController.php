@@ -49,7 +49,7 @@ class BerkasController extends Controller
             'ijazah' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'transkip_nilai' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'penilaian_prestasi_kerja' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'jadwal_pendidikan' => 'required',
+            'jadwal_pendidikan' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'peguruan_tinggi' => 'required',
             'jurusan' => 'required',
             'alamat' => 'required',
@@ -60,6 +60,7 @@ class BerkasController extends Controller
         $ijazahFile = '';
         $transkipFile = '';
         $prestasiFile = '';
+        $jdwlFile = '';
 
         // Proses upload file ijazah jika ada
         if (!empty($request->ijazah)) {
@@ -79,13 +80,19 @@ class BerkasController extends Controller
             $request->penilaian_prestasi_kerja->move(public_path('berkas/assets/penilaian_prestasi_kerja'), $prestasiFile);
         }
 
+        // Proses upload file jadwal jika ada
+        if (!empty($request->jadwal_pendidikan)) {
+            $jdwlFile = 'jadwal_' . time() . '.' . $request->jadwal_pendidikan->extension();
+            $request->jadwal_pendidikan->move(public_path('berkas/assets/jadwal_pendidikan'), $jdwlFile);
+        }
+
         // Insert data ke tabel 'berkas'
         DB::table('berkas')->insert([
             'id_users' => $request->id_users,
             'ijazah' => $ijazahFile,
             'transkip_nilai' => $transkipFile,
             'penilaian_prestasi_kerja' => $prestasiFile,
-            'jadwal_pendidikan' => $request->jadwal_pendidikan,
+            'jadwal_pendidikan' => $jdwlFile,
             'peguruan_tinggi' => $request->peguruan_tinggi,
             'jurusan' => $request->jurusan,
             'alamat' => $request->alamat,
@@ -104,7 +111,7 @@ class BerkasController extends Controller
             'ijazah' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'transkip_nilai' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'penilaian_prestasi_kerja' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'jadwal_pendidikan' => 'required',
+            'jadwal_pendidikan' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
             'peguruan_tinggi' => 'required',
             'jurusan' => 'required',
             'alamat' => 'required',
@@ -118,6 +125,10 @@ class BerkasController extends Controller
         $ijazahFile = $berkas->ijazah;
         $transkipFile = $berkas->transkip_nilai;
         $prestasiFile = $berkas->penilaian_prestasi_kerja;
+        $jdwlFile = $berkas->jadwal_pendidikan;
+
+        // Proses update file ijazah jika ada
+
 
         // Proses update file ijazah jika ada
         if ($request->hasFile('ijazah')) {
@@ -146,13 +157,21 @@ class BerkasController extends Controller
             $request->penilaian_prestasi_kerja->move(public_path('berkas/assets/penilaian_prestasi_kerja'), $prestasiFile);
         }
 
+        if ($request->hasFile('jadwal_pendidikan')) {
+            if ($jdwlFile && file_exists(public_path('berkas/assets/jadwal_pendidikan/' . $jdwlFile))) {
+                unlink(public_path('berkas/assets/jadwal_pendidikan/' . $jdwlFile));
+            }
+            $jdwlFile = 'jadwal_' . time() . '.' . $request->jadwal_pendidikan->extension();
+            $request->jadwal_pendidikan->move(public_path('berkas/assets/jadwal_pendidikan'), $jdwlFile);
+        }
+
         // Update data ke tabel 'berkas'
         DB::table('berkas')->where('id', $id)->update([
             'id_users' => $request->id_users,
             'ijazah' => $ijazahFile,
             'transkip_nilai' => $transkipFile,
             'penilaian_prestasi_kerja' => $prestasiFile,
-            'jadwal_pendidikan' => $request->jadwal_pendidikan,
+            'jadwal_pendidikan' => $jdwlFile,
             'peguruan_tinggi' => $request->peguruan_tinggi,
             'jurusan' => $request->jurusan,
             'alamat' => $request->alamat,

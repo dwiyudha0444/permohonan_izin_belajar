@@ -11,7 +11,7 @@ class PermohonanController extends Controller
 {
     public function index()
     {
-        $berkas = Berkas::all();
+        $berkas = Berkas::orderBy('created_at', 'desc')->get();
         return view('dashboard.admin.permohonan_izin_belajar.index', compact('berkas'));
     }
 
@@ -33,7 +33,6 @@ class PermohonanController extends Controller
     {
         $request->validate([
             'id_users' => 'required',
-            'jadwal_pendidikan' => 'required',
             'status' => 'required',
             'keterangan' => 'nullable',
         ]);
@@ -45,6 +44,7 @@ class PermohonanController extends Controller
         $ijazahFile = $berkas->ijazah;
         $transkipFile = $berkas->transkip_nilai;
         $prestasiFile = $berkas->penilaian_prestasi_kerja;
+        $jdwlFile = $berkas->jadwal_pendidikan;
     
         // Update data ke tabel 'berkas' tanpa mengubah file
         DB::table('berkas')->where('id', $id)->update([
@@ -52,7 +52,7 @@ class PermohonanController extends Controller
             'ijazah' => $ijazahFile,
             'transkip_nilai' => $transkipFile,
             'penilaian_prestasi_kerja' => $prestasiFile,
-            'jadwal_pendidikan' => $request->jadwal_pendidikan,
+            'jadwal_pendidikan' => $jdwlFile,
             'status' => $request->status,
             'keterangan' => $request->keterangan,
             'updated_at' => now(),

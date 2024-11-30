@@ -34,7 +34,7 @@ class LoginController extends Controller
         ];
     
         if (Auth::guard('web')->attempt($credentials)) {
-            return redirect()->route('dashboard_user');
+            return redirect()->route('monitoring');
         }
     
         return redirect()->route('login_user')->with('error', 'NIP atau Password Salah');

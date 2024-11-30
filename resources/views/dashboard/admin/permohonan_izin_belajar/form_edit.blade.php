@@ -88,9 +88,13 @@
 
                             <!-- Jadwal Pendidikan -->
                             <div class="form-group mb-3">
-                                <label for="jadwal_pendidikan">Jadwal Pendidikan</label>
-                                <input type="date" class="form-control" id="jadwal_pendidikan" name="jadwal_pendidikan"
-                                    value="{{ $berkas->jadwal_pendidikan }}" readonly>
+                                @if ($berkas->jadwal_pendidikan)
+                                    <small class="d-block mt-2">Jadwal Pendidikan yang ada: <a
+                                            href="{{ asset('berkas/assets/jadwal_pendidikan/' . $berkas->jadwal_pendidikan) }}"
+                                            target="_blank">Lihat</a></small>
+                                @endif
+                                <input type="file" class="form-control" id="jadwal_pendidikan"
+                                    name="jadwal_pendidikan" accept=".jpg,.jpeg,.png,.gif,.svg" disabled>
                             </div>
 
                             <!-- Status (Only field that can be updated) -->
