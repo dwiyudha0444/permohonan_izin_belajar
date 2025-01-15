@@ -10,14 +10,16 @@
         SIBELA
     </title>
     <!-- Fonts and icons -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" />
     <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.2.0" rel="stylesheet" />
 </head>
@@ -32,7 +34,8 @@
         </div>
     </div>
     <main class="main-content mt-0">
-        <div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
+        <div class="page-header align-items-start min-vh-100"
+            style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
             <span class="mask bg-gradient-dark opacity-6"></span>
             <div class="container my-auto">
                 <div class="row">
@@ -44,8 +47,20 @@
                                 </div>
                             </div>
                             <div class="card-body">
+                                @if (session('success'))
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
+
+                                @if (session('error'))
+                                    <div class="alert alert-danger">
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
                                 <!-- Form with action and method -->
-                                <form role="form" class="text-start" action="{{ route('login_proses_user') }}" method="POST">
+                                <form role="form" class="text-start" action="{{ route('login_proses_user') }}"
+                                    method="POST">
                                     @csrf <!-- Token CSRF -->
                                     <div class="input-group input-group-outline my-3">
                                         <label class="form-label">NIP</label>
@@ -57,11 +72,13 @@
                                     </div>
                                     <div class="text-center">
                                         <!-- Button Login -->
-                                        <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Login</button>
+                                        <button type="submit"
+                                            class="btn bg-gradient-dark w-100 my-4 mb-2">Login</button>
                                     </div>
                                     <p class="mt-4 text-sm text-center">
                                         Don't have an account?
-                                        <a href="{{ route('register_user') }}" class="text-primary text-gradient font-weight-bold">Register</a>
+                                        <a href="{{ route('register_user') }}"
+                                            class="text-primary text-gradient font-weight-bold">Register</a>
                                     </p>
                                 </form>
                             </div>

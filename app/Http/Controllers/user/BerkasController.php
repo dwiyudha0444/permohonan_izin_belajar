@@ -46,10 +46,10 @@ class BerkasController extends Controller
     {
         $request->validate([
             'id_users' => 'required',
-            'ijazah' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'transkip_nilai' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'penilaian_prestasi_kerja' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'jadwal_pendidikan' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
+            'ijazah' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'transkip_nilai' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'penilaian_prestasi_kerja' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'jadwal_pendidikan' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
             'peguruan_tinggi' => 'required',
             'jurusan' => 'required',
             'alamat' => 'required',
@@ -108,10 +108,10 @@ class BerkasController extends Controller
     {
         $request->validate([
             'id_users' => 'required',
-            'ijazah' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'transkip_nilai' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'penilaian_prestasi_kerja' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
-            'jadwal_pendidikan' => 'nullable|image|mimes:jpg,jpeg,png,gif,svg',
+            'ijazah' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'transkip_nilai' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'penilaian_prestasi_kerja' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'jadwal_pendidikan' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
             'peguruan_tinggi' => 'required',
             'jurusan' => 'required',
             'alamat' => 'required',

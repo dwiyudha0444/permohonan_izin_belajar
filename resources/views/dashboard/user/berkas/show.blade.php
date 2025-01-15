@@ -21,7 +21,7 @@
                                 <td class="text-sm font-weight-normal">
                                     <a href="{{ asset('berkas/assets/ijazah/' . $berkas->ijazah) }}" target="_blank"
                                         class="btn btn-info btn-sm">
-                                        Lihat Foto
+                                        Lihat File
                                     </a>
                                 </td>
                             </tr>
@@ -31,7 +31,7 @@
                                 <td class="text-sm font-weight-normal">
                                     <a href="{{ asset('berkas/assets/transkip_nilai/' . $berkas->transkip_nilai) }}"
                                         target="_blank" class="btn btn-info btn-sm">
-                                        Lihat Foto
+                                        Lihat File
                                     </a>
                                 </td>
                             </tr>
@@ -41,20 +41,22 @@
                                 <td class="text-sm font-weight-normal">
                                     <a href="{{ asset('berkas/assets/penilaian_prestasi_kerja/' . $berkas->penilaian_prestasi_kerja) }}"
                                         target="_blank" class="btn btn-info btn-sm">
-                                        Lihat Foto
+                                        Lihat File
                                     </a>
                                 </td>
                             </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                    Jadwal Pendidikan</th>
+                                    Surat Persetujuan
+                                </th>
                                 <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('berkas/assets/jadwal_pendidikan/' . $berkas->jadwal_pendidikan) }}"
-                                        target="_blank" class="btn btn-info btn-sm">
-                                        Lihat Foto
+                                    <a href="{{ asset('berkas/assets/surat_persetujuan/' . $berkas->surat_persetujuan) }}"
+                                        target="_blank" class="btn btn-info btn-sm" download>
+                                        Lihat dan Unduh
                                     </a>
                                 </td>
                             </tr>
+
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Status</th>

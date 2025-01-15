@@ -33,7 +33,7 @@
                             <!-- ID User -->
                             <input type="hidden" id="id_users" name="id_users" value="{{ $berkas->id_users }}">
 
-<div class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for="peguruan_tinggi">Perguruan Tinggi</label>
                                 <input type="text" class="form-control" id="peguruan_tinggi" name="peguruan_tinggi"
                                     value="{{ $berkas->peguruan_tinggi }}" readonly required>
@@ -93,9 +93,23 @@
                                             href="{{ asset('berkas/assets/jadwal_pendidikan/' . $berkas->jadwal_pendidikan) }}"
                                             target="_blank">Lihat</a></small>
                                 @endif
-                                <input type="file" class="form-control" id="jadwal_pendidikan"
-                                    name="jadwal_pendidikan" accept=".jpg,.jpeg,.png,.gif,.svg" disabled>
+                                <input type="file" class="form-control" id="jadwal_pendidikan" name="jadwal_pendidikan"
+                                    accept=".jpg,.jpeg,.png,.gif,.svg" disabled>
                             </div>
+
+                            <div class="form-group mb-3">
+                                @if ($berkas->surat_persetujuan)
+                                    <small class="d-block mt-2">Surat Persetujuan yang ada: <a
+                                            href="{{ asset('berkas/assets/surat_persetujuan/' . $berkas->surat_persetujuan) }}"
+                                            target="_blank">Lihat</a></small>
+                                @else
+                                    <small class="d-block mt-2 text-danger">Surat Persetujuan belum ada.</small>
+                                @endif
+
+                                <input type="file" class="form-control" id="surat_persetujuan" name="surat_persetujuan"
+                                    accept=".jpg,.jpeg,.png,.gif,.svg">
+                            </div>
+
 
                             <!-- Status (Only field that can be updated) -->
                             <div class="form-group mb-3">
@@ -115,7 +129,7 @@
                             <div class="form-group mb-3">
                                 <label for="keterangan">Keterangan</label>
                                 <input type="text" class="form-control" id="keterangan" name="keterangan"
-                                    value="{{ $berkas->keterangan }}" >
+                                    value="{{ $berkas->keterangan }}">
                             </div>
 
                             <!-- Button Update -->
