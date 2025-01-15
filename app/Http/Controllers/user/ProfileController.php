@@ -44,7 +44,8 @@ class ProfileController extends Controller
             'peguruan_tinggi' => 'nullable|string|max:255',
             'jurusan' => 'nullable|string|max:255',
             'alamat' => 'nullable|string|max:255',
-            'id_opd' => 'nullable',        
+            'id_opd' => 'nullable',
+            'jenis_kelamin' => 'required|in:Laki-laki,Perempuan', 
         ]);
     
         // Cari data user dengan model Eloquent
@@ -67,12 +68,14 @@ class ProfileController extends Controller
             'jurusan' => $request->jurusan,
             'alamat' => $request->alamat,
             'id_opd' => $request->id_opd,
+            'jenis_kelamin' => $request->jenis_kelamin,
             'updated_at' => now(),
         ]);
     
         return redirect()->route('profile_user')
             ->with('success', 'Data Berhasil Diperbarui');
     }
+    
     
     
 

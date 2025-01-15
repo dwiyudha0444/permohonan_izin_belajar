@@ -46,6 +46,10 @@
                                         <td>{{ Auth::user()->tgl_lahir ?? 'Data tidak tersedia' }}</td>
                                     </tr>
                                     <tr>
+                                        <td>Jenis Kelaminr</td>
+                                        <td>{{ Auth::user()->jenis_kelamin ?? 'Data tidak tersedia' }}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Pangkat</td>
                                         <td>{{ Auth::user()->pangkat ?? 'Data tidak tersedia' }}</td>
                                     </tr>

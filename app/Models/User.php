@@ -33,7 +33,8 @@ class User extends Authenticatable
         'peguruan_tinggi',
         'alamat',
         'jurusan',
-        'id_opd'
+        'id_opd',
+        'jenis_kelamin'
     ];
     
 

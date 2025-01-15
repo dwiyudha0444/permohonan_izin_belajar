@@ -4,7 +4,7 @@
     <div class="container-fluid px-2 px-md-4">
         <div class="card card-body mx-2 mx-md-2 mt-n6">
             <div class="row gx-4 mb-2">
-                
+
             </div>
             <div class="row">
                 <div class="col-12 col-xl-12">
@@ -41,6 +41,25 @@
                                                         required></td>
                                             </tr>
                                             <tr>
+                                                <td><label for="jenis_kelamin">Jenis Kelamin</label></td>
+                                                <td>
+                                                    <select class="form-control" id="jenis_kelamin" name="jenis_kelamin"
+                                                        required>
+                                                        <option value="" disabled selected>Pilih Jenis Kelamin
+                                                        </option>
+                                                        <option value="Laki-laki"
+                                                            {{ old('jenis_kelamin', $user->jenis_kelamin) == 'Laki-laki' ? 'selected' : '' }}>
+                                                            Laki-laki
+                                                        </option>
+                                                        <option value="Perempuan"
+                                                            {{ old('jenis_kelamin', $user->jenis_kelamin) == 'Perempuan' ? 'selected' : '' }}>
+                                                            Perempuan
+                                                        </option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
                                                 <td><label for="pangkat">Pangkat</label></td>
                                                 <td><input type="text" class="form-control" id="pangkat" name="pangkat"
                                                         value="{{ old('pangkat', $user->pangkat) }}" required></td>
@@ -59,7 +78,8 @@
                                                 <td><label for="lokasi_bekerja">Lokasi Tempat Bekerja</label></td>
                                                 <td><input type="text" class="form-control" id="lokasi_bekerja"
                                                         name="lokasi_bekerja"
-                                                        value="{{ old('lokasi_bekerja', $user->lokasi_bekerja) }}" required>
+                                                        value="{{ old('lokasi_bekerja', $user->lokasi_bekerja) }}"
+                                                        required>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -97,8 +117,9 @@
                                             </tr>
                                             <tr>
                                                 <td><label for="alamat">Alamat</label></td>
-                                                <td><input type="text" class="form-control" id="alamat" name="alamat"
-                                                        value="{{ old('alamat', $user->alamat) }}" required></td>
+                                                <td><input type="text" class="form-control" id="alamat"
+                                                        name="alamat" value="{{ old('alamat', $user->alamat) }}"
+                                                        required></td>
                                             </tr>
                                             <tr>
                                                 <td><label for="id_opd">OPD</label></td>
