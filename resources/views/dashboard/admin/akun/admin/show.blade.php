@@ -21,7 +21,7 @@
                                     Email</th>
                                 <td class="text-sm font-weight-normal">{{ $admin->email }}</td>
                             </tr>
-                            
+
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Nip</th>
@@ -34,19 +34,26 @@
                                 <td class="text-sm font-weight-normal">{{ $admin->tgl_lahir }}</td>
                             </tr>
 
-<tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Jenis Kelamin</th>
+                                <td class="text-sm font-weight-normal">{{ $admin->jenis_kelamin }}</td>
+                            </tr>
+
+                            <tr>
+                            <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Pangkat</th>
                                 <td class="text-sm font-weight-normal">{{ $admin->pangkat }}</td>
                             </tr>
 
-<tr>
+                            <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     TMT</th>
                                 <td class="text-sm font-weight-normal">{{ $admin->tmt }}</td>
                             </tr>
 
-<tr>
+                            <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Jabatan</th>
                                 <td class="text-sm font-weight-normal">{{ $admin->jabatan }}</td>
@@ -58,7 +65,7 @@
                                 <td class="text-sm font-weight-normal">{{ $admin->lokasi_bekerja }}</td>
                             </tr>
 
-<tr>
+                            <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Jejang Pendidikan</th>
                                 <td class="text-sm font-weight-normal">{{ $admin->jejang_pendidikan }}</td>

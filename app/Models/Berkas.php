@@ -16,6 +16,7 @@ class Berkas extends Model
         'penilaian_prestasi_kerja',
         'jadwal_pendidikan',
         'status',
+        'tgl_ajuan',
         'peguruan_tinggi',
         'jurusan',
         'alamat',

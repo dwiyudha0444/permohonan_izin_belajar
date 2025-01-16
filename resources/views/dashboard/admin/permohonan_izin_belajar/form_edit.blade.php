@@ -99,14 +99,25 @@
 
                             <div class="form-group mb-3">
                                 @if ($berkas->surat_persetujuan)
+                                    <small class="d-block mt-2">Surat Persetujuan yang ada:
+                                        <a href="{{ asset('berkas/assets/surat_persetujuan/' . $berkas->surat_persetujuan) }}"
+                                            target="_blank">Lihat</a>
+                                    </small>
+                                @endif
+                                <input type="file" class="form-control" id="surat_persetujuan" name="surat_persetujuan"
+                                    accept=".jpg,.jpeg,.png,.gif,.svg" disabled>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                @if ($berkas->surat_balasan)
                                     <small class="d-block mt-2">Surat Persetujuan yang ada: <a
-                                            href="{{ asset('berkas/assets/surat_persetujuan/' . $berkas->surat_persetujuan) }}"
+                                            href="{{ asset('berkas/assets/surat_balasan/' . $berkas->surat_balasan) }}"
                                             target="_blank">Lihat</a></small>
                                 @else
                                     <small class="d-block mt-2 text-danger">Surat Persetujuan belum ada.</small>
                                 @endif
 
-                                <input type="file" class="form-control" id="surat_persetujuan" name="surat_persetujuan"
+                                <input type="file" class="form-control" id="surat_balasan" name="surat_balasan"
                                     accept=".jpg,.jpeg,.png,.gif,.svg">
                             </div>
 

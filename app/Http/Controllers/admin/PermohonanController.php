@@ -52,18 +52,20 @@ class PermohonanController extends Controller
         $prestasiFile = $berkas->penilaian_prestasi_kerja;
         $jdwlFile = $berkas->jadwal_pendidikan;
         $suratPersetujuanFile = $berkas->surat_persetujuan;
+        $suratBalasanFile = $berkas->surat_balasan;
 
-        // Proses file surat persetujuan
-        if ($request->hasFile('surat_persetujuan')) {
+        // Proses file surat balasan
+        if ($request->hasFile('surat_balasan')) {
             // Hapus file lama jika ada
-            if ($suratPersetujuanFile && file_exists(public_path('berkas/assets/surat_persetujuan/' . $suratPersetujuanFile))) {
-                unlink(public_path('berkas/assets/surat_persetujuan/' . $suratPersetujuanFile));
+            if ($suratBalasanFile && file_exists(public_path('berkas/assets/surat_balasan/' . $suratBalasanFile))) {
+                unlink(public_path('berkas/assets/surat_balasan/' . $suratBalasanFile));
             }
 
             // Simpan file baru
-            $suratPersetujuanFile = 'surat_persetujuan_' . time() . '.' . $request->surat_persetujuan->extension();
-            $request->surat_persetujuan->move(public_path('berkas/assets/surat_persetujuan'), $suratPersetujuanFile);
+            $suratBalasanFile = 'surat_balasan_' . time() . '.' . $request->surat_balasan->extension();
+            $request->surat_balasan->move(public_path('berkas/assets/surat_balasan'), $suratBalasanFile);
         }
+
 
         // Update data ke tabel 'berkas'
         DB::table('berkas')->where('id', $id)->update([
@@ -73,6 +75,7 @@ class PermohonanController extends Controller
             'penilaian_prestasi_kerja' => $prestasiFile,
             'jadwal_pendidikan' => $jdwlFile,
             'surat_persetujuan' => $suratPersetujuanFile,
+            'surat_balasan' => $suratBalasanFile,
             'status' => $request->status,
             'keterangan' => $request->keterangan,
             'updated_at' => now(),

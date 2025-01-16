@@ -51,6 +51,7 @@ class BerkasController extends Controller
             'penilaian_prestasi_kerja' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
             'jadwal_pendidikan' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
             'peguruan_tinggi' => 'required',
+            'tgl_ajuan' => 'required',
             'jurusan' => 'required',
             'alamat' => 'required',
             'status' => 'required',
@@ -95,6 +96,7 @@ class BerkasController extends Controller
             'jadwal_pendidikan' => $jdwlFile,
             'peguruan_tinggi' => $request->peguruan_tinggi,
             'jurusan' => $request->jurusan,
+            'tgl_ajuan' => $request->tgl_ajuan,
             'alamat' => $request->alamat,
             'status' => $request->status,
             'created_at' => now(),
@@ -106,82 +108,60 @@ class BerkasController extends Controller
 
     public function update(Request $request, $id)
     {
+        // Validasi data
         $request->validate([
             'id_users' => 'required',
-            'ijazah' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
-            'transkip_nilai' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
-            'penilaian_prestasi_kerja' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
-            'jadwal_pendidikan' => 'required|mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'ijazah' => 'mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'transkip_nilai' => 'mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'penilaian_prestasi_kerja' => 'mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
+            'jadwal_pendidikan' => 'mimes:pdf,jpg,jpeg,png,gif,svg|max:2048',
             'peguruan_tinggi' => 'required',
+            'tgl_ajuan' => 'required',
             'jurusan' => 'required',
             'alamat' => 'required',
             'status' => 'required',
         ]);
-
-        // Temukan data yang akan diupdate
+    
+        // Ambil data berkas lama
         $berkas = DB::table('berkas')->where('id', $id)->first();
-
-        // Variabel untuk menyimpan nama file baru
-        $ijazahFile = $berkas->ijazah;
-        $transkipFile = $berkas->transkip_nilai;
-        $prestasiFile = $berkas->penilaian_prestasi_kerja;
-        $jdwlFile = $berkas->jadwal_pendidikan;
-
-        // Proses update file ijazah jika ada
-
-
-        // Proses update file ijazah jika ada
-        if ($request->hasFile('ijazah')) {
-            if ($ijazahFile && file_exists(public_path('berkas/assets/ijazah/' . $ijazahFile))) {
-                unlink(public_path('berkas/assets/ijazah/' . $ijazahFile));
+    
+        // Fungsi untuk menangani file upload
+        $processFile = function ($request, $field, $oldFilePath, $folder) {
+            if ($request->hasFile($field)) {
+                if ($oldFilePath && file_exists(public_path("berkas/assets/$folder/" . $oldFilePath))) {
+                    unlink(public_path("berkas/assets/$folder/" . $oldFilePath));
+                }
+                $newFileName = $field . '_' . time() . '.' . $request->file($field)->extension();
+                $request->file($field)->move(public_path("berkas/assets/$folder"), $newFileName);
+                return $newFileName;
             }
-            $ijazahFile = 'ijazah_' . time() . '.' . $request->ijazah->extension();
-            $request->ijazah->move(public_path('berkas/assets/ijazah'), $ijazahFile);
-        }
-
-        // Proses update file transkip nilai jika ada
-        if ($request->hasFile('transkip_nilai')) {
-            if ($transkipFile && file_exists(public_path('berkas/assets/transkip_nilai/' . $transkipFile))) {
-                unlink(public_path('berkas/assets/transkip_nilai/' . $transkipFile));
-            }
-            $transkipFile = 'transkip_nilai_' . time() . '.' . $request->transkip_nilai->extension();
-            $request->transkip_nilai->move(public_path('berkas/assets/transkip_nilai'), $transkipFile);
-        }
-
-        // Proses update file penilaian prestasi kerja jika ada
-        if ($request->hasFile('penilaian_prestasi_kerja')) {
-            if ($prestasiFile && file_exists(public_path('berkas/assets/penilaian_prestasi_kerja/' . $prestasiFile))) {
-                unlink(public_path('berkas/assets/penilaian_prestasi_kerja/' . $prestasiFile));
-            }
-            $prestasiFile = 'penilaian_prestasi_kerja_' . time() . '.' . $request->penilaian_prestasi_kerja->extension();
-            $request->penilaian_prestasi_kerja->move(public_path('berkas/assets/penilaian_prestasi_kerja'), $prestasiFile);
-        }
-
-        if ($request->hasFile('jadwal_pendidikan')) {
-            if ($jdwlFile && file_exists(public_path('berkas/assets/jadwal_pendidikan/' . $jdwlFile))) {
-                unlink(public_path('berkas/assets/jadwal_pendidikan/' . $jdwlFile));
-            }
-            $jdwlFile = 'jadwal_' . time() . '.' . $request->jadwal_pendidikan->extension();
-            $request->jadwal_pendidikan->move(public_path('berkas/assets/jadwal_pendidikan'), $jdwlFile);
-        }
-
+            return $oldFilePath; // Gunakan file lama jika tidak ada file baru
+        };
+    
+        // Proses masing-masing file
+        $ijazahFile = $processFile($request, 'ijazah', $berkas->ijazah, 'ijazah');
+        $transkipFile = $processFile($request, 'transkip_nilai', $berkas->transkip_nilai, 'transkip_nilai');
+        $prestasiFile = $processFile($request, 'penilaian_prestasi_kerja', $berkas->penilaian_prestasi_kerja, 'penilaian_prestasi_kerja');
+        $jadwalFile = $processFile($request, 'jadwal_pendidikan', $berkas->jadwal_pendidikan, 'jadwal_pendidikan');
+    
         // Update data ke tabel 'berkas'
         DB::table('berkas')->where('id', $id)->update([
             'id_users' => $request->id_users,
             'ijazah' => $ijazahFile,
             'transkip_nilai' => $transkipFile,
             'penilaian_prestasi_kerja' => $prestasiFile,
-            'jadwal_pendidikan' => $jdwlFile,
+            'jadwal_pendidikan' => $jadwalFile,
             'peguruan_tinggi' => $request->peguruan_tinggi,
             'jurusan' => $request->jurusan,
+            'tgl_ajuan' => $request->tgl_ajuan,
             'alamat' => $request->alamat,
             'status' => $request->status,
             'updated_at' => now(),
         ]);
-
-        return redirect()->route('upload_berkas')
-            ->with('success', 'Data Berhasil Diperbarui');
+    
+        return redirect()->route('upload_berkas')->with('success', 'Data Berhasil Diperbarui');
     }
+    
 
 
     public function destroy($id)

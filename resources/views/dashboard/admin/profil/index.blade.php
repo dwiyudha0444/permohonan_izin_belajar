@@ -46,6 +46,10 @@
                                         <td>{{ Auth::guard('admin')->user()->tgl_lahir ?? 'Data tidak tersedia' }}</td>
                                     </tr>
                                     <tr>
+                                        <td>Jenis Kelamin</td>
+                                        <td>{{ Auth::guard('admin')->user()->jenis_kelamin ?? 'Data tidak tersedia' }}</td>
+                                    </tr>
+                                    <tr>
                                         <td>Pangkat</td>
                                         <td>{{ Auth::guard('admin')->user()->pangkat ?? 'Data tidak tersedia' }}</td>
                                     </tr>

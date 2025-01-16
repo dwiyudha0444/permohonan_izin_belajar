@@ -66,6 +66,18 @@
                                     </a>
                                 </td>
                             </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Surat Balasan
+                                </th>
+                                <td class="text-sm font-weight-normal">
+                                    <a href="{{ asset('berkas/assets/surat_balasan/' . $berkas->surat_balasan) }}"
+                                        target="_blank" class="btn btn-info btn-sm">
+                                        Lihat File
+                                    </a>
+                                </td>
+                            </tr>
+
 
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">

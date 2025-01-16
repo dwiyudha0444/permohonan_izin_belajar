@@ -50,6 +50,22 @@
                                                         name="tgl_lahir" value="{{ old('tgl_lahir', $admin->tgl_lahir) }}"
                                                         required></td>
                                             </tr>
+
+                                            <tr>
+                                                <td><label for="jenis_kelamin">Jenis Kelamin</label></td>
+                                                <td>
+                                                    <select class="form-control" id="jenis_kelamin" name="jenis_kelamin"
+                                                        required>
+                                                        <option value="">-- Pilih Jenis Kelamin --</option>
+                                                        <option value="Laki-laki"
+                                                            {{ old('jenis_kelamin', $admin->jenis_kelamin) == 'Laki-laki' ? 'selected' : '' }}>
+                                                            Laki-laki</option>
+                                                        <option value="Perempuan"
+                                                            {{ old('jenis_kelamin', $admin->jenis_kelamin) == 'Perempuan' ? 'selected' : '' }}>
+                                                            Perempuan</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
                                             <tr>
                                                 <td><label for="pangkat">Pangkat</label></td>
                                                 <td><input type="text" class="form-control" id="pangkat" name="pangkat"

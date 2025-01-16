@@ -33,7 +33,7 @@
                             <!-- ID User -->
                             <input type="hidden" id="id_users" name="id_users" value="{{ Auth::user()->id }}">
 
-<div class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for="peguruan_tinggi">Perguruan Tinggi</label>
                                 <input type="text" class="form-control" id="peguruan_tinggi" name="peguruan_tinggi"
                                     value="{{ $berkas->peguruan_tinggi }}" required>
@@ -44,6 +44,13 @@
                                 <input type="text" class="form-control" id="jurusan" name="jurusan"
                                     value="{{ $berkas->jurusan }}" required>
                             </div>
+
+                            <div class="form-group mb-3">
+                                <label for="tgl_ajuan">Tanggal Ajuan</label>
+                                <input type="date" class="form-control" id="tgl_ajuan" name="tgl_ajuan"
+                                    value="{{ $berkas->tgl_ajuan }}" required>
+                            </div>
+
 
                             <div class="form-group mb-3">
                                 <label for="alamat">Alamat</label>
@@ -91,8 +98,8 @@
                             <!-- Jadwal Pendidikan -->
                             <div class="form-group mb-3">
                                 <label for="jadwal_pendidikan">Jadwal Pendidikan</label>
-                                <input type="file" class="form-control" id="jadwal_pendidikan"
-                                    name="jadwal_pendidikan" accept="image/*">
+                                <input type="file" class="form-control" id="jadwal_pendidikan" name="jadwal_pendidikan"
+                                    accept="image/*">
                                 <!-- Menampilkan file yang sudah ada jika tidak diubah -->
                                 @if ($berkas->jadwal_pendidikan)
                                     <small class="d-block mt-2">Jadwal pendidikan yang ada: <a

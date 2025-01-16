@@ -30,7 +30,7 @@
                             <!-- ID User -->
                             <input type="hidden" id="id_users" name="id_users" value="{{ Auth::user()->id }}">
 
-<div class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for="peguruan_tinggi">Peguruan Tinggi</label>
                                 <input type="text" class="form-control" id="peguruan_tinggi" name="peguruan_tinggi"
                                     required>
@@ -38,14 +38,17 @@
 
                             <div class="form-group mb-3">
                                 <label for="jurusan">Jurusan</label>
-                                <input type="text" class="form-control" id="jurusan" name="jurusan"
-                                    required>
+                                <input type="text" class="form-control" id="jurusan" name="jurusan" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="tgl_ajuan">Tanggal Ajuan</label>
+                                <input type="date" class="form-control" id="tgl_ajuan" name="tgl_ajuan" required>
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="alamat">Alamat</label>
-                                <input type="text" class="form-control" id="alamat" name="alamat"
-                                    required>
+                                <input type="text" class="form-control" id="alamat" name="alamat" required>
                             </div>
 
                             <!-- Ijazah -->
@@ -82,7 +85,7 @@
                                     required>
                             </div>
 
-                            
+
 
                             <!-- Button Simpan -->
                             <div class="text-center">
