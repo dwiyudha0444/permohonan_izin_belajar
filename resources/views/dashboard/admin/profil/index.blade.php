@@ -12,13 +12,13 @@
                         <div class="card-header pb-0 p-3">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h6 class="mb-0">Profile Information</h6>
+                                    <h6 class="mb-0">Data Diri Pegawai</h6>
                                 </div>
                                 <div class="col-md-4 text-end">
                                     <form action="{{ route('edit_profile_admin', ['id' => Auth::guard('admin')->id()]) }}" method="GET">
                                         <button type="submit" class="btn btn-primary btn-sm font-weight-bold"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile">
-                                            <i class="fas fa-user-edit text-light"></i> Edit Profile
+                                            <i class="fas fa-user-edit text-light"></i> Edit Data Diri
                                         </button>
                                     </form>
                                 </div>
@@ -34,7 +34,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Full Name</td>
+                                        <td>Nama Lengkap</td>
                                         <td>{{ Auth::guard('admin')->user()->name ?? 'Data tidak tersedia' }}</td>
                                     </tr>
                                     <tr>
@@ -60,6 +60,10 @@
                                     <tr>
                                         <td>Jabatan</td>
                                         <td>{{ Auth::guard('admin')->user()->jabatan ?? 'Data tidak tersedia' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nama Instansi Tempat Bekerjs</td>
+                                        <td>{{ Auth::guard('admin')->user()->opd->opd ?? 'Data tidak tersedia' }}</td>
                                     </tr>
                                     <tr>
                                         <td>Lokasi Tempat Bekerja / Satuan Kerja</td>
@@ -88,10 +92,6 @@
                                     <tr>
                                         <td>Alamat</td>
                                         <td>{{ Auth::guard('admin')->user()->alamat ?? 'Data tidak tersedia' }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>OPD</td>
-                                        <td>{{ Auth::guard('admin')->user()->opd->opd ?? 'Data tidak tersedia' }}</td>
                                     </tr>
                                 </tbody>
                             </table>

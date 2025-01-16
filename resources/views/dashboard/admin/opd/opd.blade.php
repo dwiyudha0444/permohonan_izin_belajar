@@ -5,7 +5,7 @@
             <div class="card-header pb-0 p-3">
                 <div class="row">
                     <div class="col-6 d-flex align-items-center">
-                        <h6 class="mb-0">Daftar OPD</h6>
+                        <h6 class="mb-0">Daftar Organisasi Perangkat Daerah Kabupaten Kudus</h6>
                     </div>
                     <div class="col-6 text-end">
                         <a class="btn bg-gradient-dark mb-0" href="{{ route('create_opd_admin') }}"><i
@@ -20,7 +20,7 @@
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No
                                 </th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">OPD
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama OPD
                                 </th>
                                 
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">

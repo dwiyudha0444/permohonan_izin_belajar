@@ -14,42 +14,49 @@
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Nama</th>
                                 <td class="text-sm font-weight-normal">{{ $monitoring->user->name }}</td>
-                            </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                    Ijazah</th>
+                                    Transkip Nilai Semester 1</th>
                                 <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('monitoring/assets/transkip_nilai_1/' . $monitoring->transkip_nilai_1) }}" target="_blank" class="btn btn-info btn-sm">
-                                        Lihat Foto
-                                    </a>
+                                    @if (!empty($monitoring->transkip_nilai_1))
+                                        <a href="{{ asset('monitoring/assets/transkip_nilai_1/' . $monitoring->transkip_nilai_1) }}"
+                                            target="_blank" class="btn btn-info btn-sm">
+                                            Lihat Foto
+                                        </a>
+                                    @else
+                                        <span>Data Kosong</span>
+                                    @endif
+
                                 </td>
                             </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                    Transkip Nilai</th>
+                                    Transkip Nilai Semester 2</th>
                                 <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('monitoring/assets/transkip_nilai_2/' . $monitoring->transkip_nilai_2) }}" target="_blank" class="btn btn-info btn-sm">
-                                        Lihat Foto
-                                    </a>
+                                    @if (!empty($monitoring->transkip_nilai_2))
+                                        <a href="{{ asset('monitoring/assets/transkip_nilai_2/' . $monitoring->transkip_nilai_2) }}"
+                                            target="_blank" class="btn btn-info btn-sm">
+                                            Lihat Foto
+                                        </a>
+                                    @else
+                                        <span>Data Kosong</span>
+                                    @endif
+
                                 </td>
                             </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                    Penilaian Prestasi Kerja</th>
+                                    Transkip Nilai Semester 3</th>
                                 <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('monitoring/assets/transkip_nilai_3/' . $monitoring->transkip_nilai_3) }}" target="_blank" class="btn btn-info btn-sm">
-                                        Lihat Foto
-                                    </a>
-                                </td>
-                            </tr>
-                            
-                            <tr>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                    Penilaian Prestasi Kerja</th>
-                                <td class="text-sm font-weight-normal">
-                                    <a href="{{ asset('monitoring/assets/transkip_nilai_4/' . $monitoring->transkip_nilai_4) }}" target="_blank" class="btn btn-info btn-sm">
-                                        Lihat Foto
-                                    </a>
+                                    @if (!empty($monitoring->transkip_nilai_3))
+                                        <a href="{{ asset('monitoring/assets/transkip_nilai_3/' . $monitoring->transkip_nilai_3) }}"
+                                            target="_blank" class="btn btn-info btn-sm">
+                                            Lihat Foto
+                                        </a>
+                                    @else
+                                        <span>Data Kosong</span>
+                                    @endif
+
                                 </td>
                             </tr>
                             <tr>

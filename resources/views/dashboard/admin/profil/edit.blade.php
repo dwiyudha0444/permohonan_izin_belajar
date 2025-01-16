@@ -20,7 +20,7 @@
                 <div class="col-12 col-xl-12">
                     <div class="card card-plain h-100">
                         <div class="card-header pb-0 p-3">
-                            <h6 class="mb-0">Edit Profile</h6>
+                            <h6 class="mb-0">Edit Data Diri</h6>
                         </div>
                         <div class="card-body p-3">
                             <form action="{{ route('update_profile_admin', $admin->id) }}" method="POST">

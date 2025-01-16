@@ -12,13 +12,13 @@
                         <div class="card-header pb-0 p-3">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <h6 class="mb-0">Profile Information</h6>
+                                    <h6 class="mb-0">Data Diri Pegawai</h6>
                                 </div>
                                 <div class="col-md-4 text-end">
                                     <form action="{{ route('edit_profile_user', ['id' => Auth::id()]) }}" method="GET">
                                         <button type="submit" class="btn btn-primary btn-sm font-weight-bold"
                                             data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile">
-                                            <i class="fas fa-user-edit text-light"></i> Edit Profile
+                                            <i class="fas fa-user-edit text-light"></i> Edit Data Diri
                                         </button>
                                     </form>
                                 </div>

@@ -37,7 +37,7 @@
             <li class="nav-item">
           <a class="nav-link text-dark" href="{{ route('opd_admin') }}">
             <i class="material-symbols-rounded opacity-5">view_in_ar</i>
-            <span class="nav-link-text ms-1">OPD</span>
+            <span class="nav-link-text ms-1">Organisasi Perangkat Daerah</span>
           </a>
         </li>
             {{-- <li class="nav-item">

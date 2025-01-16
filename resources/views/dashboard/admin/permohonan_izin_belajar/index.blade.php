@@ -5,7 +5,7 @@
             <div class="card-header pb-0 p-3">
                 <div class="row">
                     <div class="col-6 d-flex align-items-center">
-                        <h6 class="mb-0">Permohonan Izin Belajar</h6>
+                        <h6 class="mb-0">Data Permohonan Izin Belajar Pegawai</h6>
                     </div>
                     {{-- <div class="col-6 text-end">
                         <a class="btn bg-gradient-dark mb-0" href="{{ route('form_upload_berkas') }}"><i
@@ -22,14 +22,13 @@
                                 </th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama
                                 </th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ijazah
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">SK Pangkat
                                 </th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Transkip Nilai</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Penilaian Prestasi Kerja</th>
-                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Jadwal
-                                    Pendidikan</th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Surat Diterima</th>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status
                                 </th>
                                 <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
