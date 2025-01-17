@@ -51,6 +51,17 @@
                                     <p class="mb-0">Enter your email and password to register</p>
                                 </div>
                                 <div class="card-body">
+                                    @if (session('success'))
+                                        <div class="alert alert-success">
+                                            {{ session('success') }}
+                                        </div>
+                                    @endif
+
+                                    @if (session('error'))
+                                        <div class="alert alert-danger">
+                                            {{ session('error') }}
+                                        </div>
+                                    @endif
                                     <form class="pt-3 needs-validation" novalidate
                                         action="{{ route('register_proses_admin') }}" method="post">
                                         @csrf

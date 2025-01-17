@@ -17,6 +17,11 @@
                             </tr>
                             <tr>
                                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Tanggal Ajuan</th>
+                                <td class="text-sm font-weight-normal">{{ $berkas->tgl_ajuan }}</td>
+                            </tr>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                     Ijazah</th>
                                 <td class="text-sm font-weight-normal">
                                     <a href="{{ asset('berkas/assets/ijazah/' . $berkas->ijazah) }}" target="_blank"
